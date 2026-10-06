@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alumni Achievements | PSI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root{--alumni-blue:#084fa8;--alumni-navy:#063c7d;--alumni-ink:#153047;--alumni-pale:#f2f6fa;--alumni-line:#cddce8;--alumni-yellow:#ffd426}
+    body{background:#fff;color:var(--alumni-ink)}
+    .header{position:relative;z-index:10}.header nav{align-items:center}
+    .more-menu{position:relative;display:inline-flex;align-items:center}.more-menu summary{cursor:pointer;list-style:none}.more-menu summary::-webkit-details-marker{display:none}.more-menu summary:after{content:"⌄";font-size:14px;margin-left:5px;color:var(--alumni-blue)}.more-menu[open] summary:after{content:"⌃"}
+    .more-panel{position:absolute;right:0;top:28px;min-width:205px;padding:10px;background:#fff;border:1px solid var(--alumni-line);box-shadow:0 16px 36px rgba(6,60,125,.16);border-radius:14px}.more-panel a{display:block;padding:9px 12px;border-radius:8px;white-space:nowrap;text-decoration:none}.more-panel a:hover{background:var(--alumni-pale);color:var(--alumni-blue)}
+    .page-hero{background:var(--alumni-navy);padding:94px 0 78px}.page-hero:after{background:linear-gradient(90deg,rgba(6,60,125,.98),rgba(8,79,168,.72))!important}.page-hero .kicker{color:var(--alumni-yellow)}.page-hero h1{max-width:780px;margin:10px 0 0;font-size:clamp(44px,6vw,78px);line-height:.98;letter-spacing:-.065em}
+    .alumni-shell{width:min(1150px,calc(100% - 64px));margin:0 auto;padding:82px 0 112px}.alumni-intro{display:grid;grid-template-columns:.72fr 1.28fr;gap:80px;align-items:center;padding-bottom:62px;border-bottom:1px solid var(--alumni-line)}.alumni-intro h2{margin:0;color:var(--alumni-navy);font-size:clamp(32px,4.1vw,58px);line-height:1.03;letter-spacing:-.06em}.alumni-intro p{margin:0;font-size:21px;color:#38526a;max-width:650px}
+    .alumni-feature{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:62px;padding:28px;background:var(--alumni-pale);border:1px solid var(--alumni-line);border-radius:24px;align-items:stretch}.photo-slot{position:relative;min-height:350px;border:2px dashed #8faac4;border-radius:16px;background:linear-gradient(135deg,#e9f1f8,#f8fbfd);display:flex;align-items:center;justify-content:center;color:#55738d;font-size:12px;letter-spacing:.13em;font-weight:850;text-transform:uppercase;text-align:center}.photo-slot:before{content:"";width:54px;height:42px;border:2px solid #8faac4;border-radius:8px;position:absolute;top:calc(50% - 26px);left:calc(50% - 27px);opacity:.72}.photo-slot:after{content:"";width:13px;height:13px;border:2px solid #8faac4;border-radius:50%;position:absolute;top:calc(50% - 17px);left:calc(50% - 7px);opacity:.72}.photo-slot span{padding-top:72px;position:relative;z-index:1}.alumni-feature-copy{padding:24px 24px 24px 16px;display:flex;flex-direction:column;justify-content:center}.alumni-feature-copy .kicker{color:var(--alumni-blue);margin-bottom:16px}.alumni-feature-copy h3{margin:0;color:var(--alumni-navy);font-size:31px;line-height:1.05;letter-spacing:-.045em}.alumni-feature-copy p{margin:18px 0 0;font-size:18px;color:#38526a}
+    .source-note{margin-top:42px;padding:26px 30px;border-left:5px solid var(--alumni-yellow);background:#fff;border-top:1px solid var(--alumni-line);border-right:1px solid var(--alumni-line);border-bottom:1px solid var(--alumni-line);border-radius:0 14px 14px 0;font-size:19px}.source-note a{color:var(--alumni-blue);font-weight:800}.alumni-contact{display:flex;justify-content:space-between;gap:28px;align-items:center;margin-top:62px;padding:30px 34px;background:var(--alumni-blue);color:#fff;border-radius:18px}.alumni-contact p{margin:0;font-size:20px;font-weight:700}.alumni-contact a{color:var(--alumni-yellow);font-weight:850;text-decoration:none}.alumni-footer{border-top:1px solid var(--alumni-line);padding-top:28px;margin-top:62px;color:#61788d;font-size:14px}
+    @media(max-width:1000px){.header nav{gap:10px}.header .button{display:none}.alumni-intro{gap:42px}.alumni-feature{grid-template-columns:1fr}.alumni-feature-copy{padding:10px 14px 22px}}
+    @media(max-width:760px){.header{flex-wrap:wrap}.header nav{order:3;width:100%;overflow:auto;padding-bottom:4px}.header nav a{white-space:nowrap}.more-panel{left:0;right:auto}.alumni-shell{width:min(100% - 36px,1150px);padding:58px 0 80px}.alumni-intro{grid-template-columns:1fr;gap:22px;padding-bottom:42px}.alumni-intro p{font-size:18px}.alumni-feature{margin-top:42px;padding:14px}.photo-slot{min-height:260px}.alumni-contact{display:block;padding:24px}.alumni-contact a{display:inline-block;margin-top:12px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="../about/">About</a><a href="../leadership/">Leadership</a><a href="../application/">Application</a><a href="../faq/">FAQ</a><a href="../important-dates/">Important Dates</a><a href="../contact/">Contact Us</a>
+      <details class="more-menu"><summary>More</summary><div class="more-panel"><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../previous-lectures/">Lectures</a><a href="../lewis-scholars/">Lewis Scholars</a><a href="../donate/">Donate to PSI</a></div></details>
+    </nav>
+    <a class="button yellow" href="../donate/">Donate to PSI</a>
+  </header>
+  <main>
+    <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Alumni Achievements</h1></div></section>
+    <section class="alumni-shell">
+      <div class="alumni-intro"><h2>Alumni Achievements</h2><p>Alumni Achievement Information coming soon!</p></div>
+      <div class="alumni-feature">
+        <div class="photo-slot" data-figma-image="alumni-achievements-feature" data-image-src="../assets/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg" data-source-image="https://static.wixstatic.com/media/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg" role="img" aria-label="Photo placeholder"><span>Photo placeholder</span></div>
+        <div class="alumni-feature-copy"><p class="kicker">Alumni Achievements</p><h3>Alumni Achievement Information coming soon!</h3><p>Alumni Achievement Information coming soon!</p></div>
+      </div>
+      <div class="source-note">Questions? <a href="mailto:psiprogram@ohsu.edu">Contact Us</a></div>
+      <div class="alumni-contact"><p>Questions? <a href="mailto:psiprogram@ohsu.edu">Contact Us</a></p><a href="https://give.ohsufoundation.org/?pid=psi">Donate to PSI</a></div>
+      <div class="alumni-footer">Partnership for Scientific Inquiry</div>
+    </section>
+  </main>
+</body>
+</html>

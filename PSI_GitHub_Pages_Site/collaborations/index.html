@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Collaborations | PSI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root{--ink:#123047;--blue:#075b91;--blue-deep:#0a3554;--pale:#eef4f8;--line:#cbd9e3;--yellow:#f4c928}
+    .collab-page{width:min(1180px,calc(100% - 64px));margin:0 auto;padding:74px 0 116px}
+    .collab-intro{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:34px;align-items:stretch;margin-bottom:76px}
+    .collab-intro-copy{background:var(--blue-deep);color:#fff;padding:54px 56px 52px;display:flex;flex-direction:column;justify-content:center}
+    .collab-intro-copy h2{color:var(--yellow);font-size:clamp(32px,4vw,54px);line-height:1.03;letter-spacing:-.05em;margin:0 0 24px}
+    .collab-intro-copy p{font-size:20px;line-height:1.55;margin:0;color:#f7fbfe;max-width:45ch}
+    .collab-media{position:relative;display:block;min-height:100%;margin:0;background:#f5f8fa;border:1px dashed #7d9aad;overflow:hidden}
+    .collab-media:before{content:"";position:absolute;inset:14px;border:1px solid rgba(7,91,145,.25);pointer-events:none;z-index:1}
+    .collab-media img{width:100%;height:100%;min-height:310px;display:block;object-fit:cover;opacity:.16;filter:grayscale(1);background:#e5edf2}
+    .collab-media figcaption{position:absolute;left:24px;bottom:20px;color:#547083;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .collab-media figcaption:after{content:"  |  data-figma-image";color:#075b91}
+    .collab-heading{display:flex;align-items:end;justify-content:space-between;gap:26px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:28px}
+    .collab-heading h2{color:var(--ink);font-size:34px;line-height:1.06;letter-spacing:-.04em;margin:0}
+    .collab-heading p{color:#587386;font-size:14px;margin:0;max-width:38ch;text-align:right}
+    .collab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+    .collab-card{background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:160px minmax(0,1fr);min-height:235px;box-shadow:0 14px 35px rgba(10,53,84,.07)}
+    .collab-card .collab-media{border:0;border-right:1px dashed #9fb4c2;min-height:235px}
+    .collab-card .collab-media:before{inset:10px}
+    .collab-card .collab-media img{min-height:235px;height:100%;object-fit:cover}
+    .collab-card-copy{padding:27px 27px 25px;display:flex;flex-direction:column;justify-content:center}
+    .collab-card-copy h3{font-size:23px;line-height:1.12;letter-spacing:-.03em;color:var(--blue);margin:0 0 15px}
+    .collab-card-copy h4{font-size:16px;line-height:1.25;color:var(--ink);margin:0 0 10px}
+    .collab-card-copy p{font-size:14px;line-height:1.4;color:#597184;margin:0}
+    .collab-card--wide{grid-column:span 2;grid-template-columns:245px minmax(0,1fr)}
+    .collab-card--wide .collab-media,.collab-card--wide .collab-media img{min-height:260px}
+    .collab-card--wide .collab-card-copy{padding:34px 42px}
+    .collab-card--wide .collab-card-copy h3{font-size:29px}
+    .collab-source-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:26px}
+    .collab-source-strip .collab-media{height:170px;min-height:170px}
+    .collab-source-strip .collab-media img{min-height:170px}
+    .collab-footer{margin-top:66px;background:var(--pale);border-left:5px solid var(--yellow);padding:28px 32px;color:var(--ink)}
+    .collab-footer h2{font-size:23px;margin:0 0 8px;color:var(--blue)}
+    .collab-footer p{font-size:16px;line-height:1.55;margin:0;max-width:72ch}
+    .more-menu{position:relative;display:inline-block}
+    .more-menu summary{list-style:none;cursor:pointer;color:inherit;font-size:13px;line-height:1.2}
+    .more-menu summary::-webkit-details-marker{display:none}
+    .more-menu summary:after{content:"⌄";font-size:12px;margin-left:5px}
+    .more-menu[open] summary:after{content:"⌃"}
+    .more-menu-links{position:absolute;z-index:20;right:0;top:26px;display:grid;min-width:178px;padding:8px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 28px rgba(10,53,84,.15)}
+    .more-menu-links a{padding:9px 11px;color:var(--ink);text-decoration:none;font-size:13px}
+    .more-menu-links a:hover{background:var(--pale);color:var(--blue)}
+    @media(max-width:940px){.collab-intro{grid-template-columns:1fr}.collab-intro-copy{padding:42px}.collab-intro .collab-media{min-height:310px}.collab-grid{grid-template-columns:1fr}.collab-card--wide{grid-column:auto}}
+    @media(max-width:700px){.collab-page{width:min(100% - 34px,560px);padding-top:46px}.collab-intro-copy{padding:32px 26px}.collab-intro-copy p{font-size:17px}.collab-heading{display:block}.collab-heading p{text-align:left;margin-top:12px}.collab-card,.collab-card--wide{grid-template-columns:1fr}.collab-card .collab-media,.collab-card--wide .collab-media{border-right:0;border-bottom:1px dashed #9fb4c2;min-height:220px}.collab-card .collab-media img,.collab-card--wide .collab-media img{min-height:220px}.collab-card-copy,.collab-card--wide .collab-card-copy{padding:24px}.more-menu-links{right:auto;left:0}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a>
+    <nav>
+      <a href="../about/">About</a><a href="../leadership/">Leadership</a><a href="../application/">Application</a><a href="../faq/">FAQ</a><a href="../important-dates/">Important Dates</a><a href="../contact/">Contact Us</a>
+      <details class="more-menu"><summary>More</summary><div class="more-menu-links"><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../previous-lectures/">Lectures</a><a href="../lewis-scholars/">Lewis Scholars</a></div></details>
+    </nav>
+    <a class="button yellow" href="../donate/">Donate to PSI</a>
+  </header>
+  <main>
+    <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>PSI Program Collaborations</h1></div></section>
+    <section class="collab-page">
+      <div class="collab-intro">
+        <div class="collab-intro-copy"><h2>PSI Program Collaborations</h2><p>Our collaborations with Oregon Health &amp; Science University (OHSU) partners aim to inspire and empower high school students with a passion for science. Through engaging lab tours, interactive workshops, and foundational courses in scientific disciplines, we offer our students unique opportunities to explore the vast possibilities within biomedical research.</p></div>
+        <figure class="collab-media" data-figma-image="../assets/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg"><img src="../assets/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg" alt="" aria-hidden="true"><figcaption>11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg</figcaption></figure>
+      </div>
+      <div class="collab-heading"><h2>Collaborations</h2></div>
+      <div class="collab-grid">
+        <article class="collab-card collab-card--wide"><figure class="collab-media" data-figma-image="../assets/8c51ca_8fbdbfa00e8745fdaff3045c0e38af30~mv2.png"><img src="../assets/8c51ca_8fbdbfa00e8745fdaff3045c0e38af30~mv2.png" alt="" aria-hidden="true"><figcaption>8c51ca_8fbdbfa00e8745fdaff3045c0e38af30~mv2.png</figcaption></figure><div class="collab-card-copy"><h3>Department of Biomedical Engineering at OHSU</h3><h4>Mini-Course on Computer Programming</h4><p>Hosted at the Knight Cancer Research Building (KCRB) at OHSU</p></div></article>
+        <article class="collab-card"><figure class="collab-media" data-figma-image="../assets/8c51ca_1d91b60b4acf4b86961202794cd9f386~mv2.png"><img src="../assets/8c51ca_1d91b60b4acf4b86961202794cd9f386~mv2.png" alt="" aria-hidden="true"><figcaption>8c51ca_1d91b60b4acf4b86961202794cd9f386~mv2.png</figcaption></figure><div class="collab-card-copy"><h3>Biomedical Engineering Society (BMES) Student Chapter at OHSU</h3><h4>Lab Tour and Hands-On Lab Experience</h4><p>Hosted at the Knight Cancer Research Building (KCRB) at OHSU</p></div></article>
+        <article class="collab-card"><figure class="collab-media" data-figma-image="../assets/8c51ca_d571a139c52d47829704c87993b61c8d~mv2.png"><img src="../assets/8c51ca_d571a139c52d47829704c87993b61c8d~mv2.png" alt="" aria-hidden="true"><figcaption>8c51ca_d571a139c52d47829704c87993b61c8d~mv2.png</figcaption></figure><div class="collab-card-copy"><h3>CoRTEX: Conversations on Research, Technology, and Experimentation</h3><h4>Series of Classes &amp; Workshops on Neuroscience</h4><p>Hosted at the Vollum Institute at OHSU</p></div></article>
+        <article class="collab-card collab-card--wide"><figure class="collab-media" data-figma-image="../assets/8c51ca_1644ab68bf1d406396c7c5b72cd4f4e3~mv2.jpg"><img src="../assets/8c51ca_1644ab68bf1d406396c7c5b72cd4f4e3~mv2.jpg" alt="" aria-hidden="true"><figcaption>8c51ca_1644ab68bf1d406396c7c5b72cd4f4e3~mv2.jpg</figcaption></figure><div class="collab-card-copy"><h3>Figuring Out Taxes</h3><h4>A Workshop for Real Life</h4><p>Hosted at Joseph R. Robertson Collaborative Life Sciences Building</p></div></article>
+      </div>
+      <div class="collab-source-strip">
+        <figure class="collab-media" data-figma-image="../assets/11062b_7da1183e2e334edca76974eab1022eff~mv2.jpeg"><img src="../assets/11062b_7da1183e2e334edca76974eab1022eff~mv2.jpeg" alt="All Hands In"><figcaption>11062b_7da1183e2e334edca76974eab1022eff~mv2.jpeg</figcaption></figure>
+        <figure class="collab-media" data-figma-image="../assets/8c51ca_295a8875ed4c4e9a9fe433b9d58df297~mv2.png"><img src="../assets/8c51ca_295a8875ed4c4e9a9fe433b9d58df297~mv2.png" alt="image.png"><figcaption>8c51ca_295a8875ed4c4e9a9fe433b9d58df297~mv2.png</figcaption></figure>
+      </div>
+      <div class="collab-footer"><h2>Questions? Contact Us</h2><p><a href="mailto:psiprogram@ohsu.edu">psiprogram@ohsu.edu</a></p><p><a href="https://give.ohsufoundation.org/?pid=psi">Donate to PSI</a></p></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ | Partnership for Scientific Inquiry</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--faq-blue:#084fa8;--faq-ink:#12324d;--faq-muted:#5a6f82;--faq-line:#d7e2ec;--faq-wash:#f4f8fb;--faq-yellow:#f4d35e}
+.faq-page{background:#fff;color:var(--faq-ink)}
+.faq-page .page-hero{background:linear-gradient(112deg,#084fa8 0%,#1972c9 57%,#dfeef8 100%);min-height:300px;display:flex;align-items:end}
+.faq-page .page-hero:after{display:none}
+.faq-page .page-hero .content{padding:72px 32px 58px;width:min(1180px,calc(100% - 64px));margin:0 auto}
+.faq-page .page-hero .kicker{color:var(--faq-yellow);letter-spacing:.13em}
+.faq-page .page-hero h1{color:#fff;max-width:760px;font-size:clamp(42px,6vw,76px);line-height:.98;margin:12px 0 0}
+.faq-main{width:min(1180px,calc(100% - 64px));margin:0 auto;padding:72px 0 110px}
+.faq-intro{border-left:6px solid var(--faq-yellow);background:var(--faq-wash);padding:25px 30px;margin-bottom:44px;font-size:19px;line-height:1.6;color:var(--faq-ink)}
+.faq-list{border-top:1px solid var(--faq-line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;align-items:start}
+.faq-item{border-bottom:1px solid var(--faq-line);padding:0 0 0;background:#fff}
+.faq-item[open]{background:#f7fbfe}
+.faq-item summary{list-style:none;cursor:pointer;min-height:88px;display:flex;align-items:center;gap:18px;padding:21px 22px 21px 25px;color:var(--faq-blue);font-size:18px;font-weight:800;line-height:1.25}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:before{content:'+';flex:none;width:29px;height:29px;border:2px solid #8fb0c9;border-radius:50%;display:grid;place-items:center;font-size:22px;line-height:1;font-weight:500;color:var(--faq-blue)}
+.faq-item[open] summary:before{content:'−';background:var(--faq-yellow);border-color:var(--faq-yellow);color:#12324d}
+.faq-answer{padding:0 28px 29px 74px;font-size:16px;line-height:1.7;color:#314c63}
+.faq-answer p{margin:0 0 15px}.faq-answer p:last-child{margin-bottom:0}
+.faq-answer ul{margin:10px 0 0;padding-left:24px}.faq-answer li{margin:7px 0}
+.faq-answer a,.faq-page a{color:var(--faq-blue);font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.faq-answer .answer-subpoint{margin-top:10px}
+.faq-more{position:relative}.faq-more summary{cursor:pointer;list-style:none}.faq-more summary::-webkit-details-marker{display:none}.faq-more nav{position:absolute;right:0;top:42px;z-index:12;display:grid;min-width:185px;padding:10px;background:#fff;border:1px solid #d7e2ec;box-shadow:0 12px 30px #12324d1c}.faq-more nav a{padding:9px 12px;color:#12324d;text-decoration:none}.faq-more nav a:hover{background:#f4f8fb;color:#084fa8}
+@media(max-width:900px){.faq-list{grid-template-columns:1fr}.faq-page .page-hero .content,.faq-main{width:min(100% - 40px,680px)}.faq-page .page-hero .content{padding-top:56px}.faq-main{padding-top:44px}.faq-item summary{font-size:17px}}
+@media(max-width:650px){.faq-page .page-hero h1{font-size:48px}.faq-intro{font-size:17px;padding:20px}.faq-item summary{padding-left:16px;padding-right:16px}.faq-answer{padding-left:63px;padding-right:18px}}
+</style>
+</head>
+<body class="faq-page" data-source-route="/faq" data-figma-import="source-copy-and-layout">
+<header class="header">
+  <a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a>
+  <nav aria-label="Primary navigation">
+    <a href="../about/">About</a><a href="../leadership/">Leadership</a><a href="../application/">Application</a><a href="../faq/" aria-current="page">FAQ</a><a href="../important-dates/">Important Dates</a><a href="../contact/">Contact Us</a>
+    <details class="faq-more"><summary>More</summary><nav aria-label="More pages"><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../previous-lectures/">Lectures</a><a href="../lewis-scholars/">Lewis Scholars</a></nav></details>
+  </nav>
+  <a class="button yellow" href="../donate/">Donate to PSI</a>
+</header>
+<main>
+  <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Frequenty Asked Questions</h1></div></section>
+  <section class="faq-main" aria-label="Frequently asked questions">
+    <div class="faq-intro">Before contacting us with questions, check out our FAQ &amp; Important Dates page!</div>
+    <div class="faq-list">
+      <details class="faq-item" open><summary>What kind of student are we looking for?</summary><div class="faq-answer"><p>We are looking for high school students (sophomores, juniors, and seniors) in the Portland metro/Oregon area who are curious and eager to learn. We aim to be your immersive introduction to biomedical research and help grow your interest and passion in science. Don't count yourself out!</p><p>We welcome applications from all eligible students. In alignment with our mission, we prioritize students who:</p><ul><li>Belong to a group that is underrepresented in science</li><li>Come from families with limited financial resources</li><li>Have a parent(s) without higher level education</li><li>Come from a single parent household</li><li>Have been/are in the foster care system</li><li>Attend public school</li><li>Participate in other programs with similar missions (e.g., OnTrack, CTE)</li><li>Speak English as a second language</li><li>Have a physical or learning disability</li><li>Have faced unique hardships, challenges, and obstacles demonstrating resilience in the face of adversity</li><li>Are senior students, as this is their final year of eligibility for PSI</li><li>Are re-applicants to the PSI program</li></ul></div></details>
+      <details class="faq-item"><summary>Can I submit a late application after the deadline?</summary><div class="faq-answer"><p>No. We will not accept any late applications for any reason - NO EXCEPTIONS MADE. We encourage applying the following year and staying updated with other <a href="https://www.ohsu.edu/outreach/k-12-programs">OHSU's K-12 programs</a>.</p></div></details>
+      <details class="faq-item"><summary>What is the timeline for the 2027 cycle of the program?</summary><div class="faq-answer"><p>See <a href="../important-dates/">Important Dates</a></p></div></details>
+      <details class="faq-item"><summary>When will the didactic course take place for the 2027 cycle?</summary><div class="faq-answer"><p>See <a href="../important-dates/">Important Dates</a></p></div></details>
+      <details class="faq-item"><summary>What are the expectations of students enrolled in this program?</summary><div class="faq-answer"><p>You are expected to attend all of the 2-hour lectures every week, complete assignments in a timely fashion, and be scientifically curious! Only 1 excused absence is allowed with enough anticipation during the entire term and associated make-up work will be assigned. Tardiness is not acceptable. Showing up late or missing classes will result in a dismissal from the program.</p></div></details>
+      <details class="faq-item"><summary>Can I attend the course even if I do not live in Portland, OR?</summary><div class="faq-answer"><p>Yes! This course will be held virtually over Webex so students all over Oregon and in the Portland metro-area are encouraged to apply.</p></div></details>
+      <details class="faq-item"><summary>I am from out of state (not from Oregon), can I still apply?</summary><div class="faq-answer"><p>Unfortunately, our admissions process is limited to students residing in Oregon and the Portland metro-area. We welcome applications from students within the Portland metropolitan area, extending to select counties in Washington state. We do not accept any applications from those outside of these regions.</p></div></details>
+      <details class="faq-item"><summary>I don't have any research experience. Do I still qualify for this course?</summary><div class="faq-answer"><p>Yes! This is an introductory course to research and no previous experience is required or expected.</p></div></details>
+      <details class="faq-item"><summary>For the didactic course, what is the expected time per week for homework? What are the main outputs of the course?</summary><div class="faq-answer"><p>It depends on the student and the assignment at task. In general, it ranges from 1-5 hours per week. The main outputs include learning the fundamentals of medical research, reading and analyzing scientific literature, creating and delivering a journal club presentation, and writing a research proposal.</p></div></details>
+      <details class="faq-item"><summary>For the application, how many teacher recommendations do I need? And which teacher should provide this?</summary><div class="faq-answer"><p>You only need ONE teacher recommendation and it can be from any teacher or counselor.</p></div></details>
+      <details class="faq-item"><summary>Do I need to submit transcripts to apply to this program?</summary><div class="faq-answer"><p>No.</p></div></details>
+      <details class="faq-item"><summary>I am a freshman in high school, can I still apply?</summary><div class="faq-answer"><p>No, you may apply the following year(s) as we only accept sophomore, junior, and senior high school students.</p></div></details>
+      <details class="faq-item"><summary>I already did the program before, can I apply again?</summary><div class="faq-answer"><p>No, you may only participate in the program once. However, there are other opportunities to network and stay connected with PSI and our affiliations such as OHSU. We encourage you to stay updated with <a href="https://www.ohsu.edu/outreach/k-12-programs">OHSU's K-12 programs</a>.</p></div></details>
+      <details class="faq-item"><summary>I have other commitments during the Wednesday 6-8pm lecture time. Can I still apply?</summary><div class="faq-answer"><p>The expectation is that all students attend all of the lectures for their entirety. If there are other commitments, perhaps consider applying in a future cycle or rescheduling these commitments to another time. Showing up late or missing classes will result in a dismissal from the program.</p></div></details>
+      <details class="faq-item"><summary>I am not interested in doing a summer internship, am I still eligible?</summary><div class="faq-answer"><p>Yes, you are still able to take the didactic portion of the program as the summer internship is optional.</p></div></details>
+      <details class="faq-item"><summary>I am interested in the summer internship, what are the expectations?</summary><div class="faq-answer"><p>It is a 6-10 week internship where a minimum of 250 hours is expected. Students cannot exceed over 40 hours per week due to child labor laws. Times can range from late May to late August depending on your supervisor. Most internships will be in-person at OHSU; there are very limited virtual options.</p></div></details>
+      <details class="faq-item"><summary>What if I am 15-years-old or younger during the summer internship time?</summary><div class="faq-answer"><p>PSI students must be at least 16 years old by the start of the summer internship (typically June) to participate in any in-person experiences, as per OHSU policy. If you are 15 or younger, unfortunately, you will not be eligible for the in-person summer internship. There are a few virtual options available on a case-by-case basis, but they won't provide the same level of hands-on experience as being on-site.</p></div></details>
+      <details class="faq-item"><summary>I have another summer internship lined up, can I do both at the same time?</summary><div class="faq-answer"><p>No. The PSI summer internship is a rigorous experience, and your entire interest and time would be needed for that summer.</p></div></details>
+      <details class="faq-item"><summary>Do I get to pick which lab I work in during the summer internship?</summary><div class="faq-answer"><p>We do our best to match students in labs of their general scientific interests, but this is not always guaranteed. If you have a specific OHSU faculty you would like to work with, please let us know early on once you are accepted into the program.</p></div></details>
+      <details class="faq-item"><summary>Am I guaranteed a summer internship?</summary><div class="faq-answer"><p>We are committed to helping as many students as possible secure a research placement. However, a summer internship is not guaranteed. Mentor availability varies from year to year and depends on factors beyond our control, including funding and lab capacity. While we make every effort to match students with mentors, placements ultimately depend on how many labs are able to host students each summer.</p></div></details>
+      <details class="faq-item"><summary>Is the poster symposium mandatory?</summary><div class="faq-answer"><p>Yes, it is mandatory for all PSI students irrespective of the summer internship participation.</p></div></details>
+      <details class="faq-item"><summary>If I did not do a summer internship, what would I present for the poster symposium?</summary><div class="faq-answer"><p>You can present research you may have done at another internship or perhaps a literature review on a topic you are interested in.</p></div></details>
+      <details class="faq-item"><summary>I am interested in the PSI program and am applying, but I'm unsure about the question asking me to choose a research faculty member from OHSU for the summer internship. Where can I find information on potential mentors to request?</summary><div class="faq-answer"><p>Since there isn’t a comprehensive list of all OHSU faculty, this question is designed to challenge applicants to actively explore OHSU’s research community based on their research interests. Here are some tips to assist you:</p><p class="answer-subpoint"><strong>Search by Research Interest:</strong> Begin by searching for OHSU faculty in your specific field of interest. For instance, if you're interested in biomedical engineering, search for “OHSU biomedical engineering faculty.” This approach will lead you to web pages featuring researchers in that area, along with details on their work and lab members.</p><p class="answer-subpoint"><strong>Explore Lab Websites:</strong> When you find a lab, explore its website to get to know the members, their research focuses, and recent publications. This can give you a deeper understanding of whether the lab aligns with your interests and goals for the summer internship.</p><p class="answer-subpoint"><strong>Attend PSI Info Sessions:</strong> We host monthly information sessions to help guide applicants through the process. These sessions include tips on identifying research mentors who align with your interests. Find these on the <a href="../important-dates/">Important Dates</a> page.</p></div></details>
+      <details class="faq-item"><summary>Are there scholarships available for the summer internship?</summary><div class="faq-answer"><p>Yes, limited financial-need-based scholarships are available to support students during their summer internships. Scholarship availability and amounts vary each year, depending on funding.</p></div></details>
+    </div>
+  </section>
+</main>
+<footer style="background:#12324d;color:#fff;padding:28px 32px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap">
+  <a href="mailto:psiprogram@ohsu.edu" style="color:#fff">Questions? Contact Us</a>
+  <a href="https://give.ohsufoundation.org/?pid=psi" style="color:#f4d35e">Donate to PSI</a>
+</footer>
+</body>
+</html>

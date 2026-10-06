@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Media | Partnership for Scientific Inquiry</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root{--media-ink:#12385f;--media-blue:#0b5cad;--media-navy:#082b50;--media-line:#d8e2ec;--media-pale:#f2f6fa;--media-accent:#ffd44f}
+    body{background:#fff;color:var(--media-ink)}
+    .header{position:relative;z-index:10;background:#fff;border-bottom:1px solid var(--media-line)}
+    .media-page{width:min(1180px,calc(100% - 64px));margin:0 auto;padding:0 0 112px}
+    .media-hero{position:relative;min-height:350px;margin:0 calc((1180px - 100vw)/2) 0;padding:96px max(32px,calc((100vw - 1180px)/2)) 82px;background:linear-gradient(120deg,#082b50 0%,#0b5cad 60%,#dbeaf6 160%);overflow:hidden}
+    .media-hero:after{content:"";position:absolute;width:540px;height:540px;right:-160px;top:-260px;border:1px solid rgba(255,255,255,.3);border-radius:50%;box-shadow:0 0 0 28px rgba(255,255,255,.05),0 0 0 58px rgba(255,255,255,.04)}
+    .media-hero .kicker{position:relative;z-index:1;margin:0 0 14px;color:#dbeaf6;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800}
+    .media-hero h1{position:relative;z-index:1;max-width:680px;margin:0;color:#fff;font-size:clamp(52px,8vw,96px);line-height:.95;letter-spacing:-.045em}
+    .media-hero .rule{position:relative;z-index:1;width:86px;height:6px;margin-top:30px;background:var(--media-accent)}
+    .more-menu{position:relative;display:inline-block}
+    .more-menu summary{list-style:none;cursor:pointer;color:inherit}
+    .more-menu summary::-webkit-details-marker{display:none}
+    .more-menu summary:after{content:"⌄";margin-left:6px;font-size:12px}
+    .more-menu[open] .more-panel{display:grid}
+    .more-panel{display:none;position:absolute;right:0;top:calc(100% + 12px);z-index:20;grid-template-columns:1fr 1fr;gap:4px;min-width:310px;padding:12px;background:#fff;border:1px solid var(--media-line);box-shadow:0 14px 36px rgba(8,43,80,.16)}
+    .more-panel a{padding:10px 12px;color:var(--media-navy);text-decoration:none;font-size:13px;font-weight:700}
+    .more-panel a:hover{background:var(--media-pale);color:var(--media-blue)}
+    .media-intro{display:grid;grid-template-columns:1fr .75fr;gap:64px;align-items:end;padding:76px 0 44px;border-bottom:1px solid var(--media-line)}
+    .media-intro h2{margin:0;color:var(--media-navy);font-size:clamp(30px,4vw,53px);line-height:1.02;letter-spacing:-.035em}
+    .media-intro p{margin:0;color:#55708d;font-size:15px;line-height:1.7}
+    .news{padding-top:46px}
+    .news-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+    .news-heading h2{margin:0;color:var(--media-navy);font-size:32px;letter-spacing:-.025em}
+    .news-heading .index{color:var(--media-blue);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .media-gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:270px 270px;gap:14px}
+    .photo-placeholder{position:relative;min-width:0;min-height:0;background:linear-gradient(135deg,#edf3f8,#d9e5ef);border:1px solid #bfd0df;overflow:hidden}
+    .photo-placeholder:before{content:"";position:absolute;inset:14px;border:1px dashed #8eabc4;opacity:.9}
+    .photo-placeholder:after{content:"";position:absolute;left:50%;top:50%;width:28px;height:28px;transform:translate(-50%,-50%);border:2px solid #6f94b4;border-radius:50%;box-shadow:0 0 0 8px rgba(111,148,180,.12)}
+    .photo-placeholder:first-child{grid-row:span 2}
+    .photo-placeholder:nth-child(4){grid-column:2/span 2}
+    .files{margin-top:68px;padding:46px 48px;background:var(--media-pale);border-top:5px solid var(--media-blue)}
+    .files-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .files h2{margin:0;color:var(--media-navy);font-size:30px;letter-spacing:-.02em}
+    .files-head span{color:#6a8299;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+    .files a{display:block;padding:16px 42px 16px 0;border-bottom:1px solid var(--media-line);color:var(--media-blue);font-size:14px;font-weight:750;line-height:1.4;overflow-wrap:anywhere;text-decoration:none;position:relative}
+    .files a:after{content:"↗";position:absolute;right:8px;color:#7390aa;font-size:18px}
+    .files a:last-child{border-bottom:0}
+    .files a:hover{color:var(--media-navy)}
+    @media(max-width:920px){.header nav{gap:12px}.media-intro{grid-template-columns:1fr;gap:20px}.media-hero{margin-left:-32px;margin-right:-32px;padding-left:32px;padding-right:32px}}
+    @media(max-width:720px){.media-page{width:min(100% - 36px,560px)}.media-hero{margin-left:-18px;margin-right:-18px;padding:76px 18px 62px;min-height:280px}.media-gallery{grid-template-columns:1fr;grid-template-rows:none}.photo-placeholder,.photo-placeholder:first-child,.photo-placeholder:nth-child(4){grid-column:auto;grid-row:auto;height:280px}.files{padding:30px 24px}.files-head{display:block}.files-head span{display:block;margin-top:8px}.more-panel{right:auto;left:0;grid-template-columns:1fr;min-width:230px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a>
+    <nav>
+      <a href="../about/">About</a>
+      <a href="../leadership/">Leadership</a>
+      <a href="../application/">Application</a>
+      <a href="../faq/">FAQ</a>
+      <a href="../important-dates/">Important Dates</a>
+      <details class="more-menu">
+        <summary>More</summary>
+        <div class="more-panel">
+          <a href="../awards/">Awards</a>
+          <a href="../collaborations/">Collaborations</a>
+          <a href="../testimonials/">Testimonials</a>
+          <a href="../previous-lectures/">Lectures</a>
+          <a href="../lewis-scholars/">Lewis Scholars</a>
+          <a href="../media/">Media</a>
+          <a href="../contact/">Contact Us</a>
+          <a href="../donate/">Donate to PSI</a>
+        </div>
+      </details>
+    </nav>
+    <a class="button yellow" href="../donate/">Donate to PSI</a>
+  </header>
+
+  <main>
+    <section class="media-hero">
+      <p class="kicker">Partnership for Scientific Inquiry</p>
+      <h1>Media</h1>
+      <div class="rule" aria-hidden="true"></div>
+    </section>
+    <div class="media-page">
+      <section class="media-intro">
+        <h2>PSI in the News</h2>
+        <p>Questions? <a href="mailto:psiprogram@ohsu.edu">Contact Us</a></p>
+      </section>
+
+      <section class="news" aria-label="PSI in the News">
+        <div class="news-heading"><h2>PSI in the News</h2><span class="index">Media</span></div>
+        <div class="media-gallery">
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_c622b6ebec4346ca9de643f076acadfa~mv2.jpg"></div>
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_c66835058ee041bd8185bbd880fa42a6~mv2.jpg"></div>
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_c75efa267c854daeb6d1cb52c78391b8~mv2.jpg"></div>
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_d22205d7b5b646dfb27571acc3eb6e89~mv2.jpg"></div>
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_d29cf8d3b233456eb4893a877e496972~mv2.jpg"></div>
+          <div class="photo-placeholder" role="img" aria-label="Photo placeholder" data-figma-role="image-placeholder" data-figma-image="../assets/8c51ca_7d5e143a3b7b4e84a16dfaf4d0f2816f~mv2.jpg"></div>
+        </div>
+      </section>
+
+      <section class="files" aria-label="Media files">
+        <div class="files-head"><h2>Media</h2><span>PDF resources</span></div>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_44c8d83d66da4a549ca7e192b1d6cd01.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_44c8d83d66da4a549ca7e192b1d6cd01.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_f921306fefcd4f56ac236e210e4478e2.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_f921306fefcd4f56ac236e210e4478e2.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_b249a7b4dd8f43429f5199caa1dbbc42.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_b249a7b4dd8f43429f5199caa1dbbc42.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_05469f3416304dcaa3248c1c3b223bfd.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_05469f3416304dcaa3248c1c3b223bfd.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_ec038522001748e48aa298c30133b231.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_ec038522001748e48aa298c30133b231.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_4c1f21b9fbdb41d1b5d3ea967e6bb6ba.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_4c1f21b9fbdb41d1b5d3ea967e6bb6ba.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_94bcc1011ab64796981ef8272f75226c.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_94bcc1011ab64796981ef8272f75226c.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_931b0a8250bc4ffe88afbf9ca7f098d3.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_931b0a8250bc4ffe88afbf9ca7f098d3.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_e9bc5faf2f2f4886838d3f9b9bd8e2dd.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_e9bc5faf2f2f4886838d3f9b9bd8e2dd.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_232355b2347d4a04aad092958ebc80f5.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_232355b2347d4a04aad092958ebc80f5.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_327311b85659497ea99fb4b5534f6dce.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_327311b85659497ea99fb4b5534f6dce.pdf</a>
+        <a href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_9caba8061e4d4988844fbc750af87497.pdf">https://www.psiprogramohsu.com/_files/ugd/8c51ca_9caba8061e4d4988844fbc750af87497.pdf</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

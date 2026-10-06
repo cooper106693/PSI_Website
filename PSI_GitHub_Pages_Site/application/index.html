@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Application | Partnership for Scientific Inquiry</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .application-page{background:#f7f9fc}
+    .application-hero{position:relative;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;background:#063d83}
+    .application-hero .hero-media{position:absolute;inset:0;opacity:.32}
+    .application-hero .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.7)}
+    .application-hero .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,38,84,.96) 0%,rgba(3,38,84,.78) 45%,rgba(3,38,84,.15) 100%)}
+    .application-hero .content{position:relative;z-index:1;width:min(1150px,calc(100% - 64px));margin:0 auto;padding:70px 0 58px;color:#fff}
+    .application-hero .kicker{color:#ffd426}
+    .application-hero h1{max-width:700px;margin:0;font-size:clamp(50px,7vw,92px);line-height:.94;letter-spacing:-.07em}
+    .application-wrap{width:min(1150px,calc(100% - 64px));margin:0 auto;padding:76px 0 112px}
+    .application-intro{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:26px;align-items:stretch;margin-bottom:76px}
+    .status-card{background:#fff;border:1px solid #d9e3ee;border-top:7px solid #0b63ce;padding:44px 46px;box-shadow:0 16px 38px rgba(14,47,85,.08)}
+    .status-card h2{margin:0;color:#083e82;font-size:clamp(35px,4.2vw,58px);line-height:1.02;letter-spacing:-.06em}
+    .status-card .kicker{color:#0b63ce;margin-bottom:20px}
+    .deadline-card{background:#e9f1fa;border:1px solid #c7d9ec;padding:40px 38px;display:flex;flex-direction:column;justify-content:center}
+    .deadline-card p{font-size:20px;line-height:1.45;margin:0;color:#183a61}
+    .deadline-card p+p{margin-top:22px}
+    .deadline-card a{color:#084fa8;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
+    .section-heading h2{margin:0;color:#083e82;font-size:42px;line-height:1;letter-spacing:-.05em}
+    .section-heading .kicker{margin:0;color:#0b63ce}
+    .forms-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .form-card{min-height:236px;background:#fff;border:1px solid #d5e0eb;padding:31px 32px;display:flex;flex-direction:column;box-shadow:0 10px 26px rgba(14,47,85,.055)}
+    .form-card:nth-child(3){grid-column:1/-1;background:#edf3f9;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;min-height:180px}
+    .form-card h3{margin:0;color:#083e82;font-size:28px;line-height:1.1;letter-spacing:-.035em}
+    .form-card p{margin:13px 0 0;color:#334e6b;line-height:1.55;max-width:600px}
+    .form-card .button{align-self:flex-start;margin-top:auto}
+    .form-card:nth-child(3) .button{margin-top:0;white-space:nowrap}
+    .question-line{margin:32px 0 0;color:#334e6b}.question-line a{color:#084fa8;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    .figma-image-frame{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+    .figma-image-frame img{width:1px;height:1px;object-fit:cover}
+    @media(max-width:800px){
+      .application-hero .content,.application-wrap{width:min(100% - 38px,1150px)}
+      .application-intro,.forms-grid{grid-template-columns:1fr}
+      .form-card:nth-child(3){grid-column:auto;display:flex;min-height:236px}
+      .form-card:nth-child(3) .button{margin-top:auto;white-space:normal}
+      .section-heading{display:block}.section-heading h2{font-size:36px;margin-top:8px}
+    }
+  </style>
+</head>
+<body class="application-page">
+  <header class="header">
+    <a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a>
+    <nav>
+      <a href="../about/">About</a><a href="../leadership/">Leadership</a><a href="../application/">Application</a><a href="../faq/">FAQ</a><a href="../important-dates/">Important Dates</a><a href="../contact/">Contact Us</a>
+      <details class="more-nav"><summary>More</summary><div><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../previous-lectures/">Lectures</a><a href="../lewis-scholars/">Lewis Scholars</a></div></details>
+    </nav>
+    <a class="button yellow" href="../donate/">Donate to PSI</a>
+  </header>
+  <main>
+    <section class="application-hero">
+      <div class="hero-media figma-image-frame" data-figma-image="assets/5bb25034a8bb415fb3d37edd270a7f96.jpg" aria-hidden="true"><img src="../assets/5bb25034a8bb415fb3d37edd270a7f96.jpg" alt=""></div>
+      <div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Application</h1></div>
+    </section>
+    <section class="application-wrap">
+      <div class="application-intro">
+        <article class="status-card"><p class="kicker">Application</p><h2>Applications for the 2027 cycle are now open</h2></article>
+        <aside class="deadline-card"><p>Applications and Teacher Recommendations are due on Monday, November 23rd at 11:59 PM.</p><p>Before contacting us with questions, check out our <a href="../faq/">FAQ</a> &amp; <a href="../important-dates/">Important Dates</a> page!</p></aside>
+      </div>
+      <div class="section-heading"><div><p class="kicker">Application</p><h2>Forms</h2></div></div>
+      <div class="forms-grid">
+        <article class="form-card"><h3>Students click below:</h3><a class="button blue-button" href="https://forms.gle/tgczNRtcnLiXgnX58">Student Application</a></article>
+        <article class="form-card"><h3>Teachers click below:</h3><a class="button blue-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeRt9fzMYih-FVu9uDmXmHxqFjnfg9LdAOloP_1ZMNiA_0mBA/viewform?usp=header">Teacher Recommendation</a></article>
+        <article class="form-card"><div><h3>Stay Connected with PSI</h3><p>Join our email list to be notified when applications open and receive program updates.</p></div><a class="button blue-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdVE0B-opzJ8lCJxp2hqmmv0rz2DLhEwLijj61PYn0FevOX3Q/viewform?usp=publish-editor">Join Our Mailing List</a></article>
+      </div>
+      <p class="question-line"><a href="mailto:psiprogram@ohsu.edu">Questions? Contact Us</a></p>
+    </section>
+  </main>
+</body>
+</html>
