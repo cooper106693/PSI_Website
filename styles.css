@@ -38,3 +38,43 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 
 @media(max-width:1100px) and (min-width:901px){.header{grid-template-columns:minmax(0,1fr) 150px auto;gap:16px;padding-left:22px;padding-right:22px}.header .brand{width:150px;height:72px}.header nav{gap:8px}.header nav>a,.header nav summary{font-size:11px}.header nav>a[href*="contact/"]{padding-left:12px;padding-right:12px}.header>.button{padding-left:15px;padding-right:15px}}
 @media(max-width:900px){.header{min-height:92px;padding-top:10px;padding-bottom:10px}.header .brand{width:142px;height:66px}.header.is-menu-open nav>a[href*="contact/"]{margin-top:7px}.header.is-menu-open nav details>summary{justify-content:space-between;padding-left:14px;padding-right:14px}}
+
+@media(min-width:1101px){.header{min-height:158px;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:92px 52px;gap:0;padding:7px max(24px,calc((100vw - 1320px)/2))}.header .brand{position:absolute;top:8px;left:50%;width:172px;height:86px;transform:translateX(-50%)}.header nav{display:contents}.header nav>a,.header nav details{grid-row:2;align-self:center;justify-self:center;font-size:14px}.header nav>a:nth-of-type(1){grid-column:1}.header nav>a:nth-of-type(2){grid-column:2}.header nav>a:nth-of-type(3){grid-column:3}.header nav>a:nth-of-type(4){grid-column:4}.header nav>a[href*="important-dates/"]{position:static;grid-column:5;transform:none}.header nav details{grid-column:6}.header nav>a[href*="contact/"]{position:static;grid-column:7;transform:none;min-width:112px}.header>.button{grid-column:8;grid-row:2;justify-self:center;min-width:132px;font-size:14px}}
+
+/* Contact page refinement */
+.contact-page .contact-hero{padding:64px 0 68px}
+.contact-page .contact-hero h1{font-size:clamp(48px,5.7vw,72px);letter-spacing:-.045em}
+.contact-page .contact-main{width:min(860px,calc(100% - 64px));padding:56px 0 82px}
+.contact-page .contact-card{grid-template-columns:1fr;border-radius:18px}
+.contact-page .contact-card-intro{min-height:0;padding:36px 42px 34px;border-right:0;border-bottom:1px solid var(--line);background:#fff}
+.contact-page .contact-card-intro:before{width:64px;margin-bottom:18px}
+.contact-page .contact-card h2{font-size:clamp(30px,4vw,43px)}
+.contact-page .contact-card-detail{min-height:0;padding:34px 42px 40px;background:var(--pale)}
+.contact-page .contact-card-detail p{margin-bottom:11px}
+.contact-page .contact-email{background:#fff;box-shadow:0 8px 22px rgba(21,48,71,.07)}
+@media(max-width:760px){.contact-page .contact-main{width:min(100% - 40px,860px)}.contact-page .contact-card-intro,.contact-page .contact-card-detail{padding:30px 26px}.contact-page .contact-hero{padding:54px 0 58px}}
+
+/* Testimonials refinement */
+.testimonials .intro{max-width:860px}
+.testimonials .quote-grid{gap:28px}
+.testimonials .quote-card{grid-template-columns:148px 1fr;gap:28px;padding:26px;background:#fff;border-radius:16px;border-top:4px solid var(--blue);box-shadow:0 14px 34px rgba(9,47,95,.08)}
+.testimonials .quote-card.wide{grid-template-columns:210px 1fr;padding:30px}
+.testimonials .photo-placeholder{border:0;border-radius:12px;overflow:hidden;background:var(--pale)}
+.testimonials .photo-placeholder.has-photo img{object-position:center 25%}
+.testimonials blockquote{position:relative;padding-top:18px}
+.testimonials blockquote:before{content:"“";position:absolute;top:-13px;left:-3px;color:var(--yellow);font:800 44px/1 Georgia,serif}
+.testimonials .legacy-grid{gap:28px}
+.testimonials .legacy-card{display:grid;grid-template-columns:116px 1fr;grid-template-areas:"photo quote" "photo label" "photo author";column-gap:24px;border-radius:14px;box-shadow:0 12px 30px rgba(9,47,95,.06)}
+.testimonials .legacy-card .photo-placeholder{grid-area:photo;width:116px;height:145px;aspect-ratio:auto}
+.testimonials .legacy-card blockquote{grid-area:quote}
+.testimonials .legacy-card .quote-label{grid-area:label;margin-top:14px}
+.testimonials .legacy-card .quote-author{grid-area:author}
+.testimonials .photo-note{display:none}
+@media(max-width:700px){.testimonials .quote-card,.testimonials .quote-card.wide{display:block}.testimonials .quote-card .photo-placeholder,.testimonials .quote-card.wide .photo-placeholder{width:130px;height:155px;aspect-ratio:auto}.testimonials .legacy-card{display:block}.testimonials .legacy-card .photo-placeholder{margin-bottom:20px}}
+
+/* Lewis Scholar cohort separation */
+#scholar-alumni{margin-top:78px;padding:72px 42px 46px;background:var(--pale);border-top:6px solid var(--yellow)}
+#scholar-alumni .alumni-intro{max-width:760px;margin:-10px 0 30px;color:#526a7d;font-size:17px}
+#scholar-alumni .scholar-card{background:#fff}
+#previous-scholars{margin-top:0}
+@media(max-width:700px){#scholar-alumni{padding:48px 20px 28px}}
