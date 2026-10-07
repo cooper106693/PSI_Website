@@ -1,15 +1,47 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Partnership for Scientific Inquiry</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="more.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PSI Lectures | Partnership for Scientific Inquiry</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .lecture-intro{width:min(1120px,calc(100% - 64px));margin:0 auto;padding:82px 0 76px;display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+    .lecture-intro h2{margin:10px 0 0;color:#084fa8;font-size:clamp(38px,4.5vw,62px);line-height:1.02;letter-spacing:-.055em}
+    .lecture-copy>p{margin:0 0 25px;font-size:19px}
+    .topic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px;margin:0;padding:0;list-style:none}
+    .topic-list li{position:relative;padding:11px 14px 11px 35px;background:#edf5fb;border-radius:9px;font-weight:750}
+    .topic-list li:before{content:"";position:absolute;left:15px;top:19px;width:8px;height:8px;border-radius:50%;background:#ffd426;box-shadow:0 0 0 3px rgba(8,79,168,.12)}
+    .lecture-highlights{background:#063c7d;color:#fff;padding:88px 0 105px}
+    .lecture-highlights .content>h2{max-width:900px;margin:10px 0 38px;font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-.045em}
+    .lecture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+    .lecture-card{overflow:hidden;background:#fff;color:#153047;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.18)}
+    .lecture-card video{display:block;width:100%;aspect-ratio:16/9;background:#10233c;object-fit:cover}
+    .lecture-card-copy{padding:24px 26px 27px}
+    .lecture-card h3{margin:0;color:#084fa8;font-size:25px;line-height:1.12;letter-spacing:-.025em}
+    .lecture-card p{margin:7px 0 0;color:#526a7d;font-weight:700}
+    .audio-credit{margin:32px 0 0;color:#d8e5f0;font-size:14px}
+    .audio-credit a{color:#ffd426}
+    @media(max-width:900px){.lecture-intro{grid-template-columns:1fr;gap:34px}.lecture-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.lecture-intro{width:min(100% - 40px,1120px);padding:60px 0}.topic-list{grid-template-columns:1fr}.lecture-highlights{padding:65px 0 78px}.lecture-card-copy{padding:20px}}
+  </style>
+</head>
 <body>
-<header class="header"><a class="brand" href="./"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><nav><a href="about/">About</a><a href="leadership/">Leadership</a><a href="application/">Application</a><a href="faq/">FAQ</a><a href="important-dates/">Important Dates</a><details class="more-menu"><summary>More</summary><div><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="previous-lectures/">Lectures</a><a href="lewis-scholars/">Lewis Scholars</a><a href="alumni-achievements/">Alumni Achievements</a><a href="media/">Media</a><a href="visitor-analytics/">Visitor Analytics</a></div></details><a href="contact/">Contact Us</a></nav><a class="button yellow" href="donate/">Donate to PSI</a></header>
-<main>
-  <section class="hero"><div class="hero-copy"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Building tomorrow's researchers today</h1><p>The Partnership for Scientific Inquiry (PSI) program introduces high school students to the scientific process, encouraging their scientific passion and fostering a relationship between researchers and the local community.</p><div class="actions"><a class="button yellow" href="application/">Application</a><a class="button outline" href="about/">About the PSI Program</a></div></div><img src="assets/97aecb894393459e849c6cea5624c52c.jpg" alt=""></section>
-  <section class="content split"><div><p class="kicker blue">Program Overview</p><h2>About the PSI Course</h2></div><div><p>Our program accepts Sophomore, Junior, and Senior high school students who are interested in pursuing careers in medicine or biomedical research through a 16-week course from January to May.</p><p>Students are introduced to the scientific process and gain access to research scientists from OHSU and other Portland research institutes.</p><p>We meet for two hours on Wednesdays (January-May) for a lecture series and to learn about ongoing research projects conducted by scientists at Oregon Health &amp; Science University (OHSU).</p></div></section>
-  <section class="green-band"><div class="content"><p class="kicker">Elements of the Program</p><div class="cards"><article><img src="assets/psi-program-group.jpg" alt="PSI students at the Knight Cancer Institute"><h3>Didactic Mentors</h3><p>All PSI students are matched one-on-one with a didactic mentor to guide them through the 16-week didactic course.</p><a href="about/">About the PSI Program</a></article><article><img class="summer-image" src="assets/8c51ca_e12936298d0d42bba3d9cb0ba8fda319~mv2.png" alt="Student conducting summer research"><h3>Summer Internship</h3><p>Students may elect to join a scientific laboratory or perform clinical research over the summer.</p><a href="important-dates/">Important Dates</a></article><article><img src="assets/8c51ca_7bb2a221c1ff40a1aea00238dcd94cdd~mv2.jpeg" alt="PSI Conference attendees"><h3>PSI Poster Conference</h3><p>As of 2023, we host a poster symposium at the end of the summer internship series to showcase the students' research and allow them to practice their presentation skills.</p><a href="awards/">View Conference Awards</a></article></div></div></section>
-  <section class="content split story"><img class="story-logo" src="assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg" alt="Partnership for Scientific Inquiry logo"><div><p class="kicker blue">Our Story</p><h2>Our mission is to open doors to biomedical research for students in Oregon and the Portland metro community who might not have had the chance otherwise, particularly those without built-in advantages.</h2><p>This includes having parents without graduate-level education and those from low socioeconomic status. Our goal is to create a level playing field where talent, curiosity, and dedication are the primary criteria for success, thus inspiring future leaders in science from different backgrounds.</p><a class="button blue-button" href="testimonials/">Testimonials</a></div></section>
-  <section class="yellow-band"><div class="content callout"><h2>Applications for the 2027 program are now open.</h2><a class="button blue-button" href="application/">Student Application</a></div></section>
-  <section class="route-map"><div class="content"><a href="about/">About</a><a href="leadership/">Leadership</a><a href="application/">Application</a><a href="faq/">FAQ</a><a href="important-dates/">Important Dates</a><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="previous-lectures/">Previous Lectures</a><a href="lewis-scholars/">Lewis Scholars</a><a href="donate/">Donate to PSI</a><a href="alumni-achievements/">Alumni Achievements</a><a href="media/">Media</a><a href="visitor-analytics/">Visitor Analytics</a><a href="contact/">Contact Us</a></div></section>
-</main>
-<footer><div><a class="brand" href="./"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><p>Questions? <a href="mailto:psiprogram@ohsu.edu">psiprogram@ohsu.edu</a></p></div><div class="footer-links"><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="lewis-scholars/">Lewis Scholars</a><a href="media/">Media</a></div></footer>
-<script src="site.js"></script></body></html>
+  <header class="header"><a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><nav><a href="../about/">About</a><a href="../leadership/">Leadership</a><a href="../application/">Application</a><a href="../faq/">FAQ</a><a href="../important-dates/">Important Dates</a><details class="more-menu"><summary>More</summary><div><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../previous-lectures/" aria-current="page">Lectures</a><a href="../lewis-scholars/">Lewis Scholars</a><a href="../media/">Media</a></div></details><a href="../contact/">Contact Us</a></nav><a class="button yellow" href="../donate/">Donate to PSI</a></header>
+  <main>
+    <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>PSI Lectures</h1></div></section>
+    <section class="lecture-intro">
+      <div><p class="kicker blue">Course Content</p><h2>What type of content can I expect from PSI?</h2></div>
+      <div class="lecture-copy"><p>We cover diverse lecture topics and take student feedback into consideration to improve the subsequent year. Topics covered include:</p><ul class="topic-list"><li>Navigating Scientific Literature</li><li>Biology and Genetics</li><li>Cancer</li><li>Data Management</li><li>Biostatistics</li><li>Cardiovascular Mechanics</li><li>Neuroscience</li><li>Pharmacology</li><li>Epidemiology</li><li>Ethics of Human Research</li><li>Ethics of Animal Research</li><li>Ethics of Artificial Intelligence</li><li>Emerging Lab Technologies</li></ul></div>
+    </section>
+    <section class="lecture-highlights"><div class="content"><p class="kicker">Lecture Highlights</p><h2>Real lectures delivered virtually to PSI students during the 2021 program</h2><div class="lecture-grid">
+      <article class="lecture-card"><video controls preload="metadata" poster="../assets/8c51ca_364c4c69e4314dc6ac5fb8820855b5baf002.jpg"><source src="https://video.wixstatic.com/video/8c51ca_364c4c69e4314dc6ac5fb8820855b5ba/720p/mp4/file.mp4" type="video/mp4">Your browser does not support HTML video.</video><div class="lecture-card-copy"><h3>Meet the Makers of PSI</h3><p>Dr. Edward Neuwelt</p></div></article>
+      <article class="lecture-card"><video controls preload="metadata" poster="../assets/8c51ca_e497445a3d3d4bce8db27d192fbdab49f001.jpg"><source src="https://video.wixstatic.com/video/8c51ca_e497445a3d3d4bce8db27d192fbdab49/720p/mp4/file.mp4" type="video/mp4">Your browser does not support HTML video.</video><div class="lecture-card-copy"><h3>Epidemiology</h3><p>Ms. Ptak</p></div></article>
+      <article class="lecture-card"><video controls preload="metadata" poster="../assets/8c51ca_d3d5cf8b3fd44d8195970db8f9776963f002.jpg"><source src="https://video.wixstatic.com/video/8c51ca_d3d5cf8b3fd44d8195970db8f9776963/720p/mp4/file.mp4" type="video/mp4">Your browser does not support HTML video.</video><div class="lecture-card-copy"><h3>Research Approaches</h3><p>Dr. Leslie Muldoon</p></div></article>
+      <article class="lecture-card"><video controls preload="metadata" poster="../assets/8c51ca_de927a05cfe44419b4a85e93f122fe14f002.jpg"><source src="https://video.wixstatic.com/video/8c51ca_de927a05cfe44419b4a85e93f122fe14/720p/mp4/file.mp4" type="video/mp4">Your browser does not support HTML video.</video><div class="lecture-card-copy"><h3>Are Clinicians Scientists?</h3><p>Dr. Richard Rosenbaum</p></div></article>
+    </div><p class="audio-credit">PSI intro audio credit: <a href="https://www.bensound.com/" target="_blank" rel="noopener">Bensound</a></p></div></section>
+  </main>
+  <footer><div><a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><p>Questions? <a href="mailto:psiprogram@ohsu.edu">psiprogram@ohsu.edu</a></p></div><div class="footer-links"><a href="../awards/">Awards</a><a href="../collaborations/">Collaborations</a><a href="../testimonials/">Testimonials</a><a href="../lewis-scholars/">Lewis Scholars</a><a href="../media/">Media</a></div></footer>
+  <script src="../site.js"></script>
+</body>
+</html>
