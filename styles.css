@@ -13,13 +13,26 @@ img{display:block;max-width:100%}.hero>img{object-position:center center}.page-h
 .cards .card-image .summer-image{object-position:68% center;transform:scale(1.16)}
 .cards .card-image .conference-image{object-position:center 48%;transform:scale(1.1)}
 .story>img.story-logo{object-fit:contain;background:#273a7d;padding:14px}
+.course-experience{padding:100px 0 108px;background:var(--pale)}
+.course-heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:92px;align-items:end;margin-bottom:38px}
+.course-heading h2{margin:10px 0 0;color:var(--blue);font-size:clamp(36px,4.3vw,56px);line-height:1.03;letter-spacing:-.05em}
+.experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.experience-grid article{padding:30px 28px 32px;background:#fff;border-top:5px solid var(--yellow);box-shadow:0 12px 32px rgba(5,44,91,.07)}
+.experience-grid span{display:block;margin-bottom:22px;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.12em}
+.experience-grid h3{margin:0 0 14px;color:var(--blue-dark);font-size:23px;line-height:1.15;letter-spacing:-.025em}
+.experience-grid p{margin:0;font-size:16px;line-height:1.65}
+.sponsor-band{padding:72px 0;background:var(--blue-dark);color:#fff}
+.sponsor-copy{display:grid;grid-template-columns:.8fr 1.2fr;gap:92px;align-items:start}
+.sponsor-copy h2{margin:10px 0 0;color:#fff;font-size:clamp(32px,4vw,46px);line-height:1.05;letter-spacing:-.045em}
+.sponsor-copy p{margin:0 0 14px;font-size:17px;line-height:1.65}
+.sponsor-copy p:last-child{margin-bottom:0}
 footer{align-items:center;padding-top:42px;padding-bottom:42px}
 footer>div:first-child{display:flex;align-items:center;gap:20px}
 footer>div:first-child p{margin:0}
 footer .brand{flex:0 0 72px;background-color:#fff}
 .footer-links{align-items:center}
 
-@media(max-width:900px){footer>div:first-child{align-items:flex-start}}
+@media(max-width:900px){footer>div:first-child{align-items:flex-start}.course-experience{padding:72px 0 78px}.course-heading,.sponsor-copy{grid-template-columns:1fr;gap:22px}.experience-grid{grid-template-columns:1fr}.sponsor-band{padding:58px 0}}
 
 /* Site header */
 .header{min-height:112px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;padding-top:14px;padding-bottom:14px}
