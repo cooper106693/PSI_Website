@@ -35,15 +35,17 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 @media(max-width:900px){footer>div:first-child{align-items:flex-start}.course-experience{padding:72px 0 78px}.course-heading,.sponsor-copy{grid-template-columns:1fr;gap:22px}.experience-grid{grid-template-columns:1fr}.sponsor-band{padding:58px 0}}
 
 /* Site header */
-.header{min-height:112px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;padding-top:14px;padding-bottom:14px}
+.header{min-height:112px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;padding-top:14px;padding-bottom:14px;background:#273a7d;color:#fff;border-bottom-color:rgba(255,255,255,.2)}
+.header nav>a{color:#fff}
+.page-hero .kicker{color:var(--yellow)!important}
 .header .brand{width:190px;height:82px;border-radius:0;background-color:transparent;background-image:url("assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg");background-size:contain;box-shadow:none}
 .header nav{gap:12px}
 .header nav>a{white-space:nowrap}
-.header nav>a[href*="contact/"]{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 16px;border-radius:999px;background:var(--blue);color:#fff;white-space:nowrap;box-shadow:0 3px 9px rgba(8,79,168,.18)}
-.header nav>a[href*="contact/"]:hover,.header nav>a[href*="contact/"]:focus-visible{background:var(--blue-dark);color:#fff;outline:3px solid rgba(8,79,168,.18);outline-offset:2px}
-.header .more-menu summary,.header .more-nav summary,.header .lewis-nav-more summary{min-height:40px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--pale);color:var(--blue-dark);transition:background-color .18s,border-color .18s}
-.header .more-menu summary:hover,.header .more-nav summary:hover,.header .lewis-nav-more summary:hover,.header details[open]>summary{background:#fff;border-color:var(--blue)}
-.header .more-menu summary:after,.header .more-nav summary:after,.header .lewis-nav-more summary:after{content:"▾";margin-left:3px;color:var(--blue);font-size:11px;line-height:1}
+.header nav>a[href*="contact/"]{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 16px;border-radius:999px;background:#fff;color:var(--blue-dark);white-space:nowrap;box-shadow:0 3px 9px rgba(0,0,0,.18)}
+.header nav>a[href*="contact/"]:hover,.header nav>a[href*="contact/"]:focus-visible{background:var(--pale);color:var(--blue-dark);outline:3px solid rgba(255,255,255,.28);outline-offset:2px}
+.header .more-menu summary,.header .more-nav summary,.header .lewis-nav-more summary{min-height:40px;padding:8px 14px;border:1px solid rgba(255,255,255,.45);border-radius:999px;background:rgba(255,255,255,.1);color:#fff;transition:background-color .18s,border-color .18s}
+.header .more-menu summary:hover,.header .more-nav summary:hover,.header .lewis-nav-more summary:hover,.header details[open]>summary{background:rgba(255,255,255,.2);border-color:#fff}
+.header .more-menu summary:after,.header .more-nav summary:after,.header .lewis-nav-more summary:after{content:"▾";margin-left:3px;color:var(--yellow);font-size:11px;line-height:1}
 .header .more-menu[open] summary:after,.header .more-nav[open] summary:after,.header .lewis-nav-more[open] summary:after{content:"▴"}
 .header .more-menu>div,.header .more-nav>div,.header .lewis-nav-more>div{top:48px}
 
@@ -81,7 +83,7 @@ footer .brand{flex:0 0 72px;background-color:#fff}
   .header nav{display:none}
   .header>.button{min-width:124px;font-size:13px}
   .menu-toggle{display:inline-flex;align-items:center}
-  .header.is-menu-open nav{display:flex;position:absolute;left:0;right:0;top:100%;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:4px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(5,44,91,.13);font-size:15px}
+  .header.is-menu-open nav{display:flex;position:absolute;left:0;right:0;top:100%;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:4px;background:#273a7d;border-bottom:1px solid rgba(255,255,255,.2);box-shadow:0 15px 30px rgba(5,44,91,.2);font-size:15px}
   .header.is-menu-open nav>a,.header.is-menu-open nav details{padding:8px 0;margin-left:0}
   .header.is-menu-open nav>a[href*="contact/"]{margin-top:7px}
   .header.is-menu-open nav details>summary{justify-content:space-between;padding-left:14px;padding-right:14px}

@@ -22,10 +22,11 @@
     .year-lead p{font-size:17px;line-height:1.65;margin:0}
     .featured-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 42px}
     .featured-list div{padding:24px 22px;background:#063c7d;color:#fff;border-top:5px solid #ffd426;font-size:16px;line-height:1.5}
-    .event-banner{width:100%;height:370px;object-fit:cover;object-position:center;margin:0 0 24px}
+    .event-banner{width:100%;height:auto;max-height:620px;object-fit:contain;object-position:center;margin:0 0 24px;background:#edf5fb}
     .award-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
     .award-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #cddce8;background:#fff;box-shadow:0 10px 25px rgba(5,44,91,.06)}
-    .award-card img{width:100%;aspect-ratio:1 / 1.02;object-fit:cover;object-position:center;background:#edf5fb}
+    .award-card img{width:100%;aspect-ratio:4 / 3;object-fit:cover;object-position:center 30%;background:#edf5fb}
+    .award-card img.focus-right{object-position:88% 38%}
     .award-card-copy{display:flex;flex:1;flex-direction:column;padding:21px 18px 20px}
     .award-card h3{margin:0;color:#084fa8;font-size:22px;line-height:1.1;letter-spacing:-.035em}
     .award-card .name{margin:8px 0 13px;color:#083d36;font-size:16px;font-weight:800;line-height:1.25}
@@ -35,7 +36,10 @@
     .virtual p{font-size:17px;line-height:1.65}
     .virtual h3{color:#ffd426;font-size:28px;margin:28px 0 14px;letter-spacing:-.035em}
     .virtual h4{margin:20px 0 8px;color:#ffd426;font-size:17px}
-    .virtual ul{margin:0;padding-left:20px;columns:2;font-size:16px;line-height:1.65}
+    .virtual-awards-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:24px}
+    .virtual-awards-grid>div{padding:24px 26px;background:rgba(255,255,255,.08);border-top:4px solid #ffd426}
+    .virtual-awards-grid h4{margin:0 0 10px}
+    .virtual ul{margin:0;padding-left:20px;font-size:16px;line-height:1.65}
     .virtual a{color:#fff;font-weight:800}
     .dna{margin-top:92px;padding:56px 60px;background:#edf5fb}
     .dna h2{margin:0 0 22px;color:#084fa8;font-size:43px;line-height:1;letter-spacing:-.05em}
@@ -47,7 +51,7 @@
     .dna-card p{margin:0 0 8px;font-size:15px;line-height:1.48}
     .dna-card a{color:#084fa8;font-size:14px;font-weight:800}
     @media(max-width:1000px){.award-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.year-lead,.awards-intro{grid-template-columns:1fr}.awards-intro img{height:400px;min-height:0}.year-lead img{height:420px}.dna-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:720px){.awards{width:min(100% - 40px,1180px);padding:58px 0 76px}.awards-intro-copy,.virtual,.dna{padding:34px 27px}.awards-intro h1{font-size:39px}.year{margin-top:64px}.year-heading{align-items:start;flex-direction:column}.year-heading h2{font-size:38px}.year-lead img{height:auto;aspect-ratio:4 / 3}.featured-list,.award-grid,.dna-grid{grid-template-columns:1fr}.virtual ul{columns:1}.award-card img{aspect-ratio:1.2 / 1}.dna h2{font-size:36px}}
+    @media(max-width:720px){.awards{width:min(100% - 40px,1180px);padding:58px 0 76px}.awards-intro-copy,.virtual,.dna{padding:34px 27px}.awards-intro h1{font-size:39px}.year{margin-top:64px}.year-heading{align-items:start;flex-direction:column}.year-heading h2{font-size:38px}.year-lead img{height:auto;aspect-ratio:4 / 3}.featured-list,.award-grid,.dna-grid,.virtual-awards-grid{grid-template-columns:1fr}.award-card img{aspect-ratio:1.2 / 1}.dna h2{font-size:36px}}
   </style>
 </head>
 <body>
@@ -75,7 +79,7 @@
           <article class="award-card"><img src="../assets/8c51ca_d29cf8d3b233456eb4893a877e496972~mv2.jpg" alt="Keziah Ocholi"><div class="award-card-copy"><h3>Best Poster Presentation - Third Place</h3><p class="name">Keziah Ocholi</p><a href="https://drive.google.com/file/d/13365JObvMxU5j5VX_EF4IU2eN28jWmx8/view?usp=sharing" target="_blank" rel="noopener">Read More</a></div></article>
           <article class="award-card"><img src="../assets/8c51ca_1ab651599c054985935d8f53b7fb45c0~mv2.jpg" alt="Yunah Kim"><div class="award-card-copy"><h3>Best Poster Presentation - Honorable Mention</h3><p class="name">Yunah Kim</p><a href="https://drive.google.com/file/d/1QEGEMpRbRYiZee6NGd6F3_DJIZ71tFci/view?usp=sharing" target="_blank" rel="noopener">Read More</a></div></article>
         </div>
-        <div class="virtual"><p>Ahead of the in-person gathering, PSI hosted a virtual conference on August 3, 2026 to ensure all students could share their work regardless of location or summer commitments. The live event took place online, with judging and Q&amp;A conducted in real time.</p><h3>2026 PSI Virtual Conference Awardees:</h3><h4>Lightning Talks</h4><ul><li>1st: Brianna Quiroz Alvarez</li><li>2nd: Haoming (Aiden) Wu</li><li>3rd: Keziah Ocholi</li></ul><h4>Poster Presentations:</h4><ul><li>1st: Yunah Kim</li><li>2nd: Kriti Guthikonda</li><li>3rd (tie): Robin Sinha &amp; Sophia Wang</li></ul></div>
+        <div class="virtual"><p>Ahead of the in-person gathering, PSI hosted a virtual conference on August 3, 2026 to ensure all students could share their work regardless of location or summer commitments. The live event took place online, with judging and Q&amp;A conducted in real time.</p><h3>2026 PSI Virtual Conference Awardees:</h3><div class="virtual-awards-grid"><div><h4>Lightning Talks</h4><ul><li>1st: Brianna Quiroz Alvarez</li><li>2nd: Haoming (Aiden) Wu</li><li>3rd: Keziah Ocholi</li></ul></div><div><h4>Poster Presentations</h4><ul><li>1st: Yunah Kim</li><li>2nd: Kriti Guthikonda</li><li>3rd (tie): Robin Sinha &amp; Sophia Wang</li></ul></div></div></div>
       </section>
 
       <section class="year">
@@ -85,7 +89,7 @@
         <div class="featured-list"><div>Lightning Talks: Students delivered concise, impactful presentations highlighting their summer research and literature projects.</div><div>Poster Presentations: Over 40 posters covered topics in biomedical research, engineering, neuroscience, genetics, and more, reflecting the intellectual curiosity and dedication of our students.</div><div>Award Ceremony: Exceptional students were recognized for their creativity, scientific rigor, and presentation skills.</div></div>
         <div class="award-grid">
           <article class="award-card"><img src="../assets/8c51ca_ab9fc70604c2479bb27257260f562fb8~mv2.jpg" alt="Kaia Matthias presenting her poster."><div class="award-card-copy"><h3>Best Lightning Talk - First Place</h3><p class="name">Kaia Matthias</p><p class="caption">Kaia presenting her poster.</p><a href="../documents/kaia-matthias-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>
-          <article class="award-card"><img src="../assets/8c51ca_ba4d5811f9ce43709922f191ab0d89bb~mv2.jpeg" alt="McKenzie practicing her lightning talk."><div class="award-card-copy"><h3>Best Lightning Talk - Second Place</h3><p class="name">McKenzie Vo</p><p class="caption">McKenzie practicing her lightning talk.</p><a href="../documents/mckenzie-vo-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>
+          <article class="award-card"><img class="focus-right" src="../assets/8c51ca_ba4d5811f9ce43709922f191ab0d89bb~mv2.jpeg" alt="McKenzie practicing her lightning talk."><div class="award-card-copy"><h3>Best Lightning Talk - Second Place</h3><p class="name">McKenzie Vo</p><p class="caption">McKenzie practicing her lightning talk.</p><a href="../documents/mckenzie-vo-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>
           <article class="award-card"><img src="../assets/8c51ca_fedd6ed0591249759b2705693eb8a132~mv2.jpg" alt="Swathi presenting her poster."><div class="award-card-copy"><h3>Best Lightning Talk - Third Place</h3><p class="name">Swathi Ram</p><p class="caption">Swathi presenting her poster.</p><a href="../documents/swathi-ram-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>
           <article class="award-card"><img src="../assets/8c51ca_1885a3f01aa345b694c32e663defcdbb~mv2.jpg" alt="Vrasti's mom, Sofia (PSI director), and Vrasti proudly showcasing her many well-earned awards."><div class="award-card-copy"><h3>Best Lightning Talk - Honorable Mention</h3><p class="name">Vrasti Jain</p><p class="caption">Vrasti's mom, Sofia (PSI director), and Vrasti proudly showcasing her many well-earned awards.</p><a href="../documents/vrasti-jain-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>
           <article class="award-card"><img src="../assets/8c51ca_ed982dff70f54f9f8f0ff6d159b110a6~mv2.jpg" alt="Vrasti presenting her poster."><div class="award-card-copy"><h3>Best Poster Presentation - First Place</h3><p class="name">Vrasti Jain</p><p class="caption">Vrasti presenting her poster.</p><a href="../documents/vrasti-jain-2025-project.pdf" target="_blank" rel="noopener">Read More</a></div></article>

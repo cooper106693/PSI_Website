@@ -8,7 +8,7 @@
 <style>
 :root{--donate-blue:#064d9d;--donate-navy:#073b78;--donate-ink:#153047;--donate-gray:#f4f7fb;--donate-line:#cddce8;--donate-yellow:#ffd426}
 body{background:#fff;color:var(--donate-ink)}
-.donate-page .header{background:#fff}
+.donate-page .header{background:#273a7d}
 .donate-page .header nav{align-items:center}
 .more-menu{position:relative;font-size:13px;font-weight:700}
 .more-menu summary{cursor:pointer;list-style:none;padding:8px 0}
@@ -28,11 +28,10 @@ body{background:#fff;color:var(--donate-ink)}
 .donate-lead-copy{display:flex;flex-direction:column;justify-content:center;padding:54px 58px;background:var(--donate-gray);border:1px solid var(--donate-line);border-left:7px solid var(--donate-yellow);border-radius:20px}
 .donate-lead-copy h2{margin:0 0 20px;color:var(--donate-blue);font-size:clamp(32px,4vw,52px);line-height:1.03;letter-spacing:-.06em}
 .donate-lead-copy p{margin:0;max-width:500px;font-size:20px;line-height:1.45}
-.photo-frame{display:grid;place-items:center;min-height:330px;background:#eaf2f8;border:1px dashed #7c9bb5;border-radius:20px;color:#5b7488;text-align:center;letter-spacing:.12em;font-size:11px;font-weight:850;text-transform:uppercase}
-.photo-frame span{display:grid;gap:8px;place-items:center}
-.photo-frame span:before{content:"";display:block;width:42px;height:34px;border:2px solid #7c9bb5;border-radius:5px;background:linear-gradient(135deg,transparent 46%,#7c9bb5 47%,#7c9bb5 54%,transparent 55%),linear-gradient(45deg,transparent 46%,#7c9bb5 47%,#7c9bb5 54%,transparent 55%)}
-.photo-frame[data-source="foundation"]{min-height:110px;background:#fff;border-style:solid;border-color:var(--donate-line)}
-.photo-frame[data-source="foundation"] span:before{width:38px;height:28px}
+.photo-frame{min-height:330px;overflow:hidden;background:#eaf2f8;border:1px solid var(--donate-line);border-radius:20px}
+.photo-frame img{display:block;width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center}
+.give-block .photo-frame{min-height:220px;background:#fff}
+.give-block .photo-frame img{min-height:220px;object-fit:contain}
 .section-block{padding:74px 0 0}
 .section-block h2{margin:0 0 18px;color:var(--donate-blue);font-size:clamp(30px,3.5vw,45px);line-height:1.05;letter-spacing:-.055em}
 .section-block>p{max-width:840px;margin:0 0 22px;font-size:18px}
@@ -41,6 +40,12 @@ body{background:#fff;color:var(--donate-ink)}
 .support-card{border-top:5px solid var(--donate-blue);min-height:150px}
 .impact-card{background:var(--donate-gray);min-height:132px}
 .support-card p,.impact-card p{margin:0;font-size:16px;line-height:1.45}
+.gift-table-wrap{overflow-x:auto;margin-top:26px;border:1px solid var(--donate-line);border-radius:14px;box-shadow:0 12px 30px rgba(21,48,71,.05)}
+.gift-table{width:100%;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.4}
+.gift-table th,.gift-table td{padding:17px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--donate-line)}
+.gift-table th{background:var(--donate-navy);color:#fff;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.gift-table tr:last-child td{border-bottom:0}
+.gift-table td:nth-child(2){white-space:nowrap;color:var(--donate-blue);font-weight:800}
 .give-block{display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center;margin-top:76px;padding:40px 44px;border-radius:20px;background:var(--donate-blue);color:#fff}
 .give-block h2{color:#fff;margin:0 0 14px}
 .give-block p{margin:0;max-width:680px;font-size:18px}
@@ -91,7 +96,7 @@ body{background:#fff;color:var(--donate-ink)}
         <h2>Support the Next Generation of Scientists!</h2>
         <p>Your gift helps high school students gain real-world research experience at OHSU.</p>
       </div>
-      <div class="photo-frame" data-figma-image="donate-hero-photo" data-source="assets/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg" aria-label="Photo placeholder for original PSI donation image"><span>Photo placeholder</span></div>
+      <div class="photo-frame"><img src="../assets/psi-knight-cancer-institute-2026.png" alt="PSI students visiting the OHSU Knight Cancer Institute in 2026"></div>
     </div>
     <section class="section-block">
       <h2>Why Donate?</h2>
@@ -111,10 +116,11 @@ body{background:#fff;color:var(--donate-ink)}
         <article class="impact-card"><p>Donations keep the program free and accessible for all participants</p></article>
       </div>
       <p style="margin-top:28px">Every dollar directly supports student learning and research experiences. Here’s what your gift can provide:</p>
+      <div class="gift-table-wrap"><table class="gift-table"><thead><tr><th>Example</th><th>Donation Estimate (US$)</th><th>Impact</th></tr></thead><tbody><tr><td>Scholarships for Summer Internships (15–50 students)</td><td>$2,000–$4,000 per student<br>($30K–$200K/year)</td><td>Enables participation for students with financial need</td></tr><tr><td>In-Person Poster Conference &amp; Student Symposium</td><td>$6,000–$12,000</td><td>Venue, printing, awards, food/refreshments</td></tr><tr><td>Laptops for Accessibility</td><td>$1,000–$20,000</td><td>Technology for students with limited access</td></tr><tr><td>Website &amp; Educational Tools</td><td>$500 annually</td><td>Keeps the program running online</td></tr><tr><td>Webcam &amp; Headphones for Virtual Class</td><td>$20–$30 per student</td><td>Ensures participation in didactic courses</td></tr><tr><td>Printed Materials &amp; Outreach</td><td>$500–$2,000</td><td>Flyers, posters, student booklets</td></tr></tbody></table></div>
     </section>
     <section class="give-block">
       <div><h2>How to Give:</h2><p>Click the Donate button below to make a secure, tax-deductible gift through the OHSU Foundation.</p><a class="button" href="https://give.ohsufoundation.org/?pid=psi">Donate to PSI</a></div>
-      <div class="photo-frame" data-figma-image="ohsu-foundation-logo" data-source="assets/8c51ca_5dfbc0fc87ea4916ae3dd703205ac61a~mv2.jpg" aria-label="Photo placeholder for OHSU Foundation logo"><span>Photo placeholder</span></div>
+      <div class="photo-frame"><img src="../assets/8c51ca_5dfbc0fc87ea4916ae3dd703205ac61a~mv2.jpg" alt="Oregon Health &amp; Science University Foundation"></div>
     </section>
     <p class="donate-thanks">We are grateful to every donor, sponsor, and volunteer who helps make PSI possible. Together, we can inspire the next generation of scientists and innovators!</p>
   </section>
