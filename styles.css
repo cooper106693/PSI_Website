@@ -45,11 +45,12 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 @media(min-width:901px){
   .header{display:flex;min-height:104px;padding:10px max(28px,calc((100vw - 1380px)/2));gap:clamp(18px,2vw,34px)}
   .header .brand{position:static;flex:0 0 164px;width:164px;height:78px;transform:none}
-  .header nav{display:flex;flex:1;grid-column:auto;grid-row:auto;align-items:center;justify-content:flex-end;gap:clamp(10px,1.25vw,21px);font-size:14px}
+  .header nav{display:flex;flex:1;grid-column:auto;grid-row:auto;align-items:center;justify-content:flex-start;gap:clamp(10px,1.25vw,21px);font-size:14px}
   .header nav>a,.header nav details{position:static;grid-column:auto;grid-row:auto;align-self:center;justify-self:auto;transform:none;white-space:nowrap}
-  .header nav details{order:8}
+  .header nav details{order:8;margin-left:auto;position:relative}
   .header nav>a[href*="contact/"]{order:9;position:static;transform:none;min-width:112px}
   .header>.button{position:static;flex:0 0 auto;grid-column:auto;grid-row:auto;justify-self:auto;min-width:132px;font-size:14px}
+  .header nav details>div,.header nav details>ul{left:auto!important;right:0!important;top:calc(100% + 8px)!important;margin:0!important}
 }
 @media(max-width:1100px) and (min-width:901px){
   .header{padding-left:20px;padding-right:20px;gap:12px}
@@ -58,6 +59,26 @@ footer .brand{flex:0 0 72px;background-color:#fff}
   .header nav>a[href*="contact/"]{min-width:94px;padding-left:11px;padding-right:11px}
   .header>.button{min-width:112px;padding-left:13px;padding-right:13px;font-size:12px}
   .header .more-menu summary,.header .more-nav summary,.header .lewis-nav-more summary{padding-left:11px;padding-right:11px}
+}
+
+/* Keep the full navigation from compressing into a crowded middle-width row. */
+@media(max-width:1180px){
+  .header{display:flex;min-height:92px;padding:10px 20px;justify-content:space-between;gap:18px}
+  .header .brand{flex:0 0 142px;width:142px;height:66px}
+  .header nav{display:none}
+  .header>.button{min-width:124px;font-size:13px}
+  .menu-toggle{display:inline-flex;align-items:center}
+  .header.is-menu-open nav{display:flex;position:absolute;left:0;right:0;top:100%;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:4px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(5,44,91,.13);font-size:15px}
+  .header.is-menu-open nav>a,.header.is-menu-open nav details{padding:8px 0;margin-left:0}
+  .header.is-menu-open nav>a[href*="contact/"]{margin-top:7px}
+  .header.is-menu-open nav details>summary{justify-content:space-between;padding-left:14px;padding-right:14px}
+  .header.is-menu-open .more-menu>div,.header.is-menu-open .more-nav>div,.header.is-menu-open .lewis-nav-more>div{position:static;width:auto;margin:5px 0 2px;box-shadow:none}
+}
+
+/* Bring the scientist into the visual center of the homepage hero. */
+@media(min-width:901px){
+  .hero{overflow:hidden}
+  .hero>img{object-position:68% center;transform:translateY(-24px) scale(1.1);transform-origin:center center}
 }
 
 /* Contact page refinement */
