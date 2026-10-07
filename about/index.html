@@ -8,10 +8,9 @@
 <style>
 :root{--blue:#084fa8;--navy:#063c7d;--pale:#edf5fb;--line:#cddce8;--yellow:#ffd426;--ink:#17324d}
 .about{width:min(1180px,calc(100% - 64px));margin:0 auto;padding:74px 0 118px;color:var(--ink)}
-.about-intro{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:stretch;margin-bottom:84px}
-.image-frame{position:relative;min-height:420px;background:var(--pale);border:1px solid var(--line);padding:10px;overflow:hidden}
-.image-frame img{display:block;width:100%;height:100%;min-height:398px;object-fit:cover}
-.image-frame:after{content:"IMAGE FRAME • REPLACE IN FIGMA";position:absolute;left:22px;bottom:22px;background:rgba(6,60,125,.94);color:#fff;font:700 11px/1.2 Arial,sans-serif;letter-spacing:.08em;padding:9px 11px}
+.about-intro{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:36px;align-items:start;margin-bottom:84px}
+.image-frame{position:relative;aspect-ratio:4 / 3;background:var(--pale);border:1px solid var(--line);padding:10px;overflow:hidden}
+.image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% center}
 .caption{display:block;margin-top:11px;color:#496579;font-size:12px;line-height:1.4}
 .intro-copy{background:var(--pale);border-top:8px solid var(--yellow);padding:44px 46px 40px}
 .intro-copy h2{font-size:clamp(34px,4vw,58px);line-height:1.02;letter-spacing:-.05em;color:var(--navy);margin:12px 0 25px}
@@ -64,8 +63,8 @@ nav{display:flex;align-items:center;gap:18px}
   <section class="about">
     <div class="about-intro">
       <figure class="image-frame">
-        <img src="../assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" data-figma-image="assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" alt="OHSU campus building">
-        <figcaption class="caption">Banner Image of OHSU, courtesy of: <a href="https://www.ohsu.edu/doernbecher/pediatric-medical-education-program-visiting-students">https://www.ohsu.edu/doernbecher/pediatric-medical-education-program-visiting-students</a></figcaption>
+        <img src="../assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" data-figma-image="assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" alt="Dr. Edward Neuwelt presenting biomedical imaging research">
+        <figcaption class="caption">Dr. Edward Neuwelt presenting biomedical imaging research.</figcaption>
       </figure>
       <div class="intro-copy"><p class="kicker">Our Story</p><h2>The Partnership for Scientific Inquiry (PSI), founded in 1999, is a cornerstone outreach initiative of OHSU.</h2><p>PSI introduces high school sophomores and juniors to real-world biomedical research, encouraging hands-on laboratory experience and mentoring by leading scientists. After the retirement of Drs. Edward Neuwelt, James Rosenbaum, and Richard Rosenbaum, Drs. Muldoon and Barajas stepped in to carry forward the PSI High School science program, maintaining its excellence, expanding its reach, and guiding it into its next chapter.</p></div>
     </div>
@@ -77,7 +76,7 @@ nav{display:flex;align-items:center;gap:18px}
     <div class="text-layout">
       <aside class="text-nav"><p>Program Highlights:</p><p>Didactic Mentors</p><p>Summer Internship Mentors</p><p>Oral Presentations</p><p>Written Assignments</p><p>Summer Research (OPTIONAL)</p><p>PSI Poster Conference</p><p>Credit</p></aside>
       <div class="text-section">
-        <section class="text-block wide"><h2>Program Highlights:</h2><ul class="highlights"><li>Over 1,000 students mentored since inception.</li><li>Encourages critical and creative thinking.</li><li>Supports student engagement in science fairs and competitions.</li><li>Builds meaningful connections between young learners and the scientific community.</li></ul><a class="resource-link" href="https://www.psiprogramohsu.com/_files/ugd/8c51ca_44c8d83d66da4a549ca7e192b1d6cd01.pdf">Read the 2026 Annual Alumni Newsletter Here</a></section>
+        <section class="text-block wide"><h2>Program Highlights:</h2><ul class="highlights"><li>Over 1,000 students mentored since inception.</li><li>Encourages critical and creative thinking.</li><li>Supports student engagement in science fairs and competitions.</li><li>Builds meaningful connections between young learners and the scientific community.</li></ul><a class="resource-link" href="../documents/psi-2026-alumni-newsletter.pdf">Read the 2026 Annual Alumni Newsletter Here</a></section>
         <section class="text-block"><h2>Didactic Mentors</h2><p>All PSI students are matched one-on-one with a didactic mentor to guide them through the 16-week didactic course.</p><p>These mentors are volunteers who are passionate about helping our students. Typically, these mentors are graduate students, medical students, dual-degree students (MD-MPH, MD-PhD, etc.), nursing students, dental students, post-doctoral scholars, and more.</p><p>They serve as a great resource to the students for the course as well as for career guidance.</p></section>
         <section class="text-block"><h2>Summer Internship Mentors</h2><p>Students will be asked to submit research faculty in a partnering institution (such as OHSU) that they are interested in working with during the summer internship. The PSI team will reach out to these potential mentors and update the student if they need to submit new interests. It will not be possible to pair all students with their first mentor choice but the PSI team is passionate to match as many students into OHSU labs for a rigorous summer internship experience. Despite our efforts, it is possible that we might not have enough mentors for every student, and this is the main reason that we are not able to accept all students who apply to our program.</p><p>PSI summer internship mentors expect a high-quality work ethic from students. Students must be in good standing to earn this opportunity (i.e., regular attendance and homework completion). Any act of academic dishonesty or poor academic standing within the program may result in termination from PSI.</p></section>
         <section class="text-block"><h2>Oral Presentations</h2><p>Each student will prepare two presentations during the course of our program. One will be a "journal club" presentation of a published scientific article and the second will be a presentation of the research proposal developed by the student.</p></section>

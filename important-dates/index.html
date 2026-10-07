@@ -11,9 +11,7 @@
     .dates-intro-copy{padding:54px 52px 50px}
     .dates-intro-copy h1{margin:0;color:#084fa8;font-size:54px;line-height:1;letter-spacing:-.065em}
     .dates-intro-copy .rule{width:74px;height:5px;margin:25px 0 0;background:#ffd426}
-    .source-photo{min-height:335px;background:#dce5ee;position:relative;overflow:hidden}
-    .source-photo:before{content:"";position:absolute;inset:22px;border:2px dashed #8ea6bd}
-    .source-photo:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#b9cada;box-shadow:0 -1px 0 rgba(255,255,255,.45)}
+    .source-photo{display:block;width:100%;height:100%;min-height:335px;object-fit:cover;object-position:center;background:#dce5ee}
     .dates-timeline{position:relative;margin-top:76px;padding-left:37px}
     .dates-timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:12px;width:2px;background:#c2d0df}
     .date-item{position:relative;display:grid;grid-template-columns:292px 1fr;gap:36px;padding:0 0 34px;margin:0 0 34px;border-bottom:1px solid #d5e0ea}
@@ -55,7 +53,7 @@
     <section class="dates-page">
       <section class="dates-intro">
         <div class="dates-intro-copy"><h1>Important Dates</h1><div class="rule" aria-hidden="true"></div></div>
-        <div class="source-photo" data-photo-src="../assets/11062b_ee7c9464680f45b18d8830e3aef5a755~mv2_d_4032_3024_s_4_2.jpg" role="img" aria-label="Source photo placeholder"></div>
+        <img class="source-photo" src="../assets/11062b_b8f54a47fba14e8d82bb5a334f95b0bc~mv2.jpg" alt="Scientist conducting laboratory research with a microscope and glassware">
       </section>
       <section class="dates-timeline">
         <article class="date-item"><div class="date-label">September 18th, 2026</div><div class="date-copy"><p>Application forms open</p></div></article>
