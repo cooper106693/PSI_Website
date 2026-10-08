@@ -28,7 +28,7 @@
   }
 
   const photoStyle = document.createElement('style');
-  photoStyle.textContent = '.mobile-contact-link{display:none!important}.photo-placeholder.has-photo{padding:0!important}.photo-placeholder.has-photo:after,.image-frame:after{display:none!important}.photo-placeholder.has-photo img{display:block;width:100%;height:100%;object-fit:cover}.more-menu>ul{position:absolute;z-index:100;right:0;top:36px;width:220px;max-height:min(70vh,460px);overflow:auto;margin:0;padding:9px;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 38px rgba(5,44,91,.18)}.more-menu>ul li{margin:0;padding:0}@media(max-width:900px){.header>.button[href*="donate"]{display:none!important}.header>.mobile-contact-link{display:inline-flex!important;margin-left:auto}.header.is-menu-open .more-menu>ul{position:static;width:auto;margin:5px 0 2px;box-shadow:none}}';
+  photoStyle.textContent = '.mobile-contact-link{display:none!important}.photo-placeholder.has-photo{padding:0!important}.photo-placeholder.has-photo:after,.image-frame:after{display:none!important}.photo-placeholder.has-photo img{display:block;width:100%;height:100%;object-fit:cover}.more-menu>ul{position:absolute;z-index:100;right:0;top:36px;width:220px;max-height:min(70vh,460px);overflow:auto;margin:0;padding:9px;list-style:none;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 38px rgba(5,44,91,.18)}.more-menu>ul li{margin:0;padding:0}@media(max-width:900px){.header>.button:not(.mobile-contact-link){display:none!important}.header>.mobile-contact-link{display:inline-flex!important;margin-left:auto}.header.is-menu-open .more-menu>ul{position:static;width:auto;margin:5px 0 2px;box-shadow:none}}';
   document.head.append(photoStyle);
   document.querySelectorAll('.photo-placeholder[data-image-src],.photo-placeholder[data-figma-image],.photo-placeholder[data-photo-src]').forEach((frame) => {
     const source = frame.dataset.imageSrc || frame.dataset.figmaImage || frame.dataset.photoSrc;
@@ -42,6 +42,20 @@
 
   header.querySelectorAll('nav details').forEach((menu) => {
     if (!menu.classList.contains('more-menu') && !menu.classList.contains('more-nav')) menu.classList.add('more-menu');
+    const menuPanel = menu.querySelector(':scope > div, :scope > ul');
+    const brand = header.querySelector('.brand');
+    if (!menuPanel || !brand || menuPanel.querySelector('.home-menu-link')) return;
+    const homeLink = document.createElement('a');
+    homeLink.className = 'home-menu-link';
+    homeLink.href = brand.href;
+    homeLink.textContent = 'Home';
+    if (menuPanel.tagName === 'UL') {
+      const item = document.createElement('li');
+      item.append(homeLink);
+      menuPanel.prepend(item);
+    } else {
+      menuPanel.prepend(homeLink);
+    }
   });
   document.querySelectorAll('nav a[href*="visitor-analytics"],nav a[href*="alumni-achievements"],a[href*="media/"]').forEach((link) => link.remove());
   document.querySelectorAll('.cards article:nth-child(3) a[href="previous-lectures/"]').forEach((link) => {
