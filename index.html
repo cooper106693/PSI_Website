@@ -1,17 +1,102 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Partnership for Scientific Inquiry</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="more.css"></head>
-<body>
-<header class="header"><a class="brand" href="./"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><nav><a href="about/">About</a><a href="leadership/">Leadership</a><a href="application/">Application</a><a href="faq/">FAQ</a><a href="important-dates/">Important Dates</a><details class="more-menu"><summary>More</summary><div><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="previous-lectures/">Lectures</a><a href="lewis-scholars/">Lewis Scholars</a><a href="alumni-achievements/">Alumni Achievements</a><a href="media/">Media</a><a href="visitor-analytics/">Visitor Analytics</a></div></details><a href="contact/">Contact Us</a></nav><a class="button yellow" href="donate/">Donate to PSI</a></header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Partnership for Scientific Inquiry</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="more.css">
+  <style>
+    .timeline-draft{--navy:#075a80;--navy-deep:#063c7d;--mint:#34cda3;--gold:#ffd166;--coral:#ef4c70;--soft:#f3f8fb}
+    .draft-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);min-height:640px;background:var(--navy-deep);color:#fff;overflow:hidden}
+    .draft-hero-copy{padding:86px max(42px,calc((100vw - 1240px)/2));padding-right:70px;align-self:center}
+    .draft-hero h1{font-size:clamp(48px,5.7vw,80px);line-height:1.01;letter-spacing:-.035em;max-width:720px;margin:14px 0 25px}
+    .draft-hero-copy>p:not(.kicker){font-size:19px;max-width:650px}
+    .draft-hero-media{position:relative;min-height:640px}
+    .draft-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center center}
+    .draft-hero-label{position:absolute;left:24px;right:24px;bottom:24px;background:rgba(6,60,125,.9);color:#fff;padding:17px 20px;font-weight:800}
+    .journey{padding:100px 0 108px;background:#edf5fb;border-top:1px solid #cddce8}
+    .journey-head{margin-bottom:34px}
+    .journey-head h2{font-size:clamp(39px,5vw,64px);line-height:1;letter-spacing:-.05em;margin:0;color:var(--navy-deep)}
+    .timeline-panel{background:var(--navy-deep);color:#fff;border-radius:34px;padding:54px 46px 44px;overflow:hidden}
+    .timeline-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:relative;gap:24px}
+    .timeline-steps:before{content:"";position:absolute;left:12%;right:12%;top:72px;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--mint),var(--gold),var(--coral))}
+    .phase{position:relative;text-align:center;z-index:1;display:flex;flex-direction:column;align-items:center}
+    .phase-icon{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:15px;font-weight:900;letter-spacing:.02em;margin-bottom:22px;box-shadow:0 0 0 10px var(--navy-deep)}
+    .phase:nth-child(1) .phase-icon{background:var(--mint)}
+    .phase:nth-child(2) .phase-icon{background:var(--gold);color:var(--navy-deep)}
+    .phase:nth-child(3) .phase-icon{background:var(--coral)}
+    .phase h3{font-size:25px;line-height:1.1;margin:0 0 7px;color:#fff}
+    .phase-time{margin:0 0 22px;font-size:17px;color:#fff}
+    .phase ul{list-style:none;padding:0;margin:0 0 24px;color:#d5e8f2;line-height:1.5;min-height:108px}
+    .phase-outcome{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.18);font-weight:800;font-size:14px}
+    .journey-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .journey-cta .button:first-child{background:var(--yellow);color:var(--navy-deep)}
+    .journey-cta .button:last-child{border:1px solid rgba(255,255,255,.65);color:#fff}
+    .experience{background:var(--soft);padding:100px 0}
+    .experience-layout{display:grid;grid-template-columns:minmax(330px,.88fr) minmax(0,1.12fr);gap:70px;align-items:center}
+    .student-photo{margin:0;min-height:610px;background:#dceaf2;overflow:hidden}
+    .student-photo img{width:100%;height:610px;object-fit:cover;object-position:center 38%}
+    .experience-copy h2{font-size:clamp(38px,4.6vw,59px);line-height:1.03;letter-spacing:-.045em;margin:10px 0 24px;color:var(--navy-deep)}
+    .experience-copy>p{font-size:18px}
+    .benefit-list{display:grid;gap:0;margin:34px 0}
+    .benefit{display:grid;grid-template-columns:50px 1fr;gap:18px;padding:22px 0;border-top:1px solid #cbdce6}
+    .benefit:last-child{border-bottom:1px solid #cbdce6}
+    .benefit-number{font-size:24px;font-weight:900;color:var(--blue)}
+    .benefit h3{margin:0 0 5px;color:var(--navy-deep);font-size:21px}
+    .benefit p{margin:0}
+    .mission{padding:98px 0;background:#fff}
+    .mission-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+    .mission h2{font-size:clamp(38px,4.5vw,58px);line-height:1.05;letter-spacing:-.045em;color:var(--navy-deep);margin:10px 0}
+    .mission-copy{font-size:18px}
+    .final-cta{background:var(--yellow);padding:72px 0}
+    .final-cta .content{display:flex;align-items:center;justify-content:space-between;gap:36px}
+    .final-cta h2{font-size:clamp(34px,4vw,50px);line-height:1.05;letter-spacing:-.04em;margin:0;color:var(--navy-deep)}
+    @media(max-width:900px){.draft-hero{grid-template-columns:1fr}.draft-hero-copy{padding:68px 30px}.draft-hero-media{min-height:420px}.experience-layout,.mission-grid{grid-template-columns:1fr;gap:28px}.timeline-panel{padding:42px 26px}.timeline-steps{grid-template-columns:1fr;gap:42px}.timeline-steps:before{left:51px;right:auto;top:55px;bottom:55px;width:8px;height:auto;background:linear-gradient(180deg,var(--mint),var(--gold),var(--coral))}.phase{display:grid;grid-template-columns:102px 1fr;text-align:left;column-gap:24px;align-items:start}.phase-icon{grid-row:1/6;width:94px;height:94px;margin:0;box-shadow:0 0 0 8px var(--navy-deep)}.phase h3,.phase-time,.phase ul,.phase-outcome{grid-column:2}.phase ul{min-height:0}.phase-outcome{justify-self:start}.student-photo,.student-photo img{height:520px;min-height:520px}.final-cta .content{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.draft-hero-media{min-height:340px}.journey,.experience,.mission{padding:72px 0}.timeline-panel{border-radius:22px;padding:36px 20px}.phase{grid-template-columns:74px 1fr;column-gap:18px}.phase-icon{width:68px;height:68px;font-size:11px}.timeline-steps:before{left:30px}.phase h3{font-size:21px}.student-photo,.student-photo img{height:450px;min-height:450px}.final-cta{padding:55px 0}}
+  </style>
+</head>
+<body class="timeline-draft">
+<header class="header"><a class="brand" href="./"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><nav><a href="about/">About</a><a href="leadership/">Leadership</a><a href="application/">Application</a><a href="faq/">FAQ</a><a href="important-dates/">Important Dates</a><details class="more-menu"><summary>More</summary><div><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="previous-lectures/">Lectures</a><a href="lewis-scholars/">Lewis Scholars</a></div></details><a href="contact/">Contact Us</a></nav><a class="button yellow" href="donate/">Donate to PSI</a></header>
 <main>
   <section class="hero"><div class="hero-copy"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Building tomorrow's researchers today</h1><p>The Partnership for Scientific Inquiry (PSI) program introduces high school students to the scientific process, encouraging their scientific passion and fostering a relationship between researchers and the local community.</p><div class="actions"><a class="button yellow" href="application/">Application</a><a class="button outline" href="about/">About the PSI Program</a></div></div><img class="hero-main-image" src="assets/homepage-lab-2026.png" alt="PSI students working together in a biomedical research laboratory"></section>
+
   <section class="content split"><div><p class="kicker blue">Program Overview</p><h2>About the PSI Course</h2></div><div><p>Our program accepts Sophomore, Junior, and Senior high school students who are interested in pursuing careers in medicine or biomedical research through a 16-week course from January to May. Students are introduced to the scientific process and gain access to research scientists from OHSU and other Portland research institutes.</p><p>The semester-long program typically ends with a summer internship opportunity to work alongside a research mentor, requiring students to be at least 16 years old.</p><p>We meet for two hours on Wednesdays (January-May) for a lecture series and to learn about ongoing research projects conducted by scientists at Oregon Health &amp; Science University (OHSU).</p></div></section>
-  <section class="green-band"><div class="content"><p class="kicker">Elements of the Program</p><div class="cards"><article><div class="card-image"><img class="mentor-image" src="assets/mentor-autumn-schnathorst.jpeg" alt="PSI student Autumn Schnathorst with her mentor at a poster presentation"></div><h3>Didactic Mentors</h3><p>All PSI students are matched one-on-one with a didactic mentor to guide them through the 16-week didactic course.</p><a href="about/">About the PSI Program</a></article><article><div class="card-image"><img class="summer-image" src="assets/8c51ca_e12936298d0d42bba3d9cb0ba8fda319~mv2.png" alt="Student conducting summer research"></div><h3>Summer Internship</h3><p>Students may elect to join a scientific laboratory or perform clinical research over the summer.</p><a href="important-dates/">Important Dates</a></article><article><div class="card-image"><img class="conference-image" src="assets/8c51ca_7bb2a221c1ff40a1aea00238dcd94cdd~mv2.jpeg" alt="PSI students and mentors at the poster conference"></div><h3>PSI Poster Conference</h3><p>As of 2023, we host a poster symposium at the end of the summer internship series to showcase the students' research and allow them to practice their presentation skills.</p><a href="awards/">View Conference Awards</a></article></div></div></section>
-  <section class="course-experience"><div class="content"><div class="course-heading"><p class="kicker blue">The Student Experience</p><h2>Learning science by doing science</h2></div><div class="experience-grid"><article><span>01</span><h3>Mentorship &amp; Scientific Communication</h3><p>Each student will be mentored by a researcher. Each student gains firsthand knowledge of research methods, and, with their mentor's help, will present a published research article in a journal club format and develop their own research proposal.</p></article><article><span>02</span><h3>Commitment &amp; Summer Research</h3><p>The program requires regular attendance and significant time commitment outside of class for course assignments. Students may elect to join a scientific laboratory or perform clinical research over the summer. Research faculty and students volunteer their time and resources to mentor PSI students.</p></article><article><span>03</span><h3>Connecting with Local Schools</h3><p>We work closely with local high school officials to reach out to students interested in science and medical research and to arrange for high school credit earned by participating in the class.</p></article></div></div></section>
+
+  <section class="journey" id="program-journey">
+    <div class="content">
+      <div class="journey-head"><h2>Program Timeline</h2></div>
+      <div class="timeline-panel">
+        <div class="timeline-steps">
+          <article class="phase"><div class="phase-icon">CLASSES</div><h3>Academic Term</h3><p class="phase-time">January – May</p><ul><li>Weekly classes</li><li>Weekly mentorship meetings</li><li>Research fundamentals</li><li>Scientific methodology</li></ul><div class="phase-outcome">3 Major Assignments</div></article>
+          <article class="phase"><div class="phase-icon">RESEARCH</div><h3>Summer Internship</h3><p class="phase-time">June – August</p><ul><li>8-10 week Research Experience</li><li>Faculty mentoring</li><li>Hands-on lab work</li></ul><div class="phase-outcome">Research Project</div></article>
+          <article class="phase"><div class="phase-icon">PRESENT</div><h3>PSI Conference</h3><p class="phase-time">August</p><ul><li>Poster presentations</li><li>Research showcase</li><li>Program conclusion</li></ul><div class="phase-outcome">Final Presentation</div></article>
+        </div>
+        <div class="journey-cta"><a class="button" href="important-dates/">View Important Dates</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="green-band"><div class="content"><p class="kicker">Elements of the Program</p><div class="cards"><article><div class="card-image"><img class="mentor-image" src="assets/mentor-autumn-schnathorst.jpeg" alt="PSI student Autumn Schnathorst with her mentor at a poster presentation"></div><h3>Didactic Mentors</h3><p>All PSI students are matched one-on-one with a mentor in the OHSU School of Medicine to guide them through the 16-week didactic course.</p><a href="about/">About the PSI Program</a></article><article><div class="card-image"><img class="summer-image" src="assets/8c51ca_e12936298d0d42bba3d9cb0ba8fda319~mv2.png" alt="Student conducting summer research"></div><h3>Summer Internship</h3><p>Students may elect to join a scientific laboratory or perform clinical research over the summer.</p><a href="important-dates/">Important Dates</a></article><article><div class="card-image"><img class="conference-image" src="assets/8c51ca_7bb2a221c1ff40a1aea00238dcd94cdd~mv2.jpeg" alt="PSI students and mentors at the poster conference"></div><h3>PSI Poster Conference</h3><p>As of 2023, we host a poster symposium at the end of the summer internship series to showcase the students' research and allow them to practice their presentation skills.</p><a href="awards/">View Conference Awards</a></article></div></div></section>
+
+  <section class="experience">
+    <div class="content experience-layout">
+      <figure class="student-photo"><img src="assets/psi-students-in-lab.png" alt="PSI students wearing laboratory coats and protective equipment"></figure>
+      <div class="experience-copy"><p class="kicker blue">The Student Experience</p><h2>Learning science by doing science</h2><div class="benefit-list">
+        <div class="benefit"><div class="benefit-number">01</div><div><h3>Mentorship &amp; Scientific Communication</h3><p>Each student will be mentored by a training researcher. Each student gains firsthand knowledge of research methods, and, with their mentor's help, will present a published research article in a journal club format and develop their own research proposal.</p></div></div>
+        <div class="benefit"><div class="benefit-number">02</div><div><h3>Commitment &amp; Summer Research</h3><p>The program requires regular attendance and significant time commitment outside of class for course assignments. Students may elect to join a scientific laboratory or perform clinical research over the summer. Research faculty and students volunteer their time and resources to mentor PSI students.</p></div></div>
+        <div class="benefit"><div class="benefit-number">03</div><div><h3>Connecting with Local Schools</h3><p>We work closely with local high school officials to reach out to students interested in science and medical research and to arrange for high school credit earned by participating in the class.</p></div></div>
+      </div></div>
+    </div>
+  </section>
+
   <section class="content split story"><img class="story-logo" src="assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg" alt="Partnership for Scientific Inquiry logo"><div><p class="kicker blue">Our Story</p><h2>Our mission is to open doors to biomedical research for students in Oregon and the Portland metro community who might not have had the chance otherwise, particularly those without built-in advantages.</h2><p>This includes having parents without graduate-level education and those from low socioeconomic status. Our goal is to create a level playing field where talent, curiosity, and dedication are the primary criteria for success, thus inspiring future leaders in science from different backgrounds.</p><p>We are committed to providing equitable access and opportunities in the world of biomedical research, ensuring that every aspiring student, regardless of their background, can participate and excel in this transformative experience.</p><a class="button blue-button" href="testimonials/">Testimonials</a></div></section>
+
   <section class="sponsor-band"><div class="content sponsor-copy"><div><p class="kicker">Community Support</p><h2>We are so grateful to our sponsors!</h2></div><div><p><strong>Past sponsor(s):</strong> Jonathan D + Mark C. Lewis Foundation, the Renaissance Foundation and the OHSU Biomedical Engineering Department.</p><p>We deeply appreciate their support that helped build and sustain our program.</p></div></div></section>
-  <section class="yellow-band"><div class="content callout"><h2>Applications for the 2027 program are now open.</h2><a class="button blue-button" href="application/">Student Application</a></div></section>
-  <section class="route-map"><div class="content"><a href="about/">About</a><a href="leadership/">Leadership</a><a href="application/">Application</a><a href="faq/">FAQ</a><a href="important-dates/">Important Dates</a><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="previous-lectures/">Previous Lectures</a><a href="lewis-scholars/">Lewis Scholars</a><a href="donate/">Donate to PSI</a><a href="alumni-achievements/">Alumni Achievements</a><a href="media/">Media</a><a href="visitor-analytics/">Visitor Analytics</a><a href="contact/">Contact Us</a></div></section>
+
+  <section class="final-cta"><div class="content"><h2>Applications for the 2027 program are now open.</h2><a class="button blue-button" href="application/">Start Your Application</a></div></section>
 </main>
 <footer><div><a class="brand" href="./"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><p>Questions? Contact Us (psiprogram@ohsu.edu)</p></div><div class="footer-links"><a href="awards/">Awards</a><a href="collaborations/">Collaborations</a><a href="testimonials/">Testimonials</a><a href="lewis-scholars/">Lewis Scholars</a><a href="media/">Media</a></div></footer>
-<script src="site.js"></script></body></html>
+<script src="site.js"></script>
+</body>
+</html>
