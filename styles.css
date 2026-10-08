@@ -35,7 +35,7 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 @media(max-width:900px){footer>div:first-child{align-items:flex-start}.course-experience{padding:72px 0 78px}.course-heading,.sponsor-copy{grid-template-columns:1fr;gap:22px}.experience-grid{grid-template-columns:1fr}.sponsor-band{padding:58px 0}}
 
 /* Site header */
-.header{min-height:112px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;padding-top:14px;padding-bottom:14px;background:#273a7d;color:#fff;border-bottom-color:rgba(255,255,255,.2)}
+.header{min-height:112px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr);gap:24px;padding-top:14px;padding-bottom:14px;background:#253372;color:#fff;border-bottom-color:rgba(255,255,255,.2)}
 .header nav>a{color:#fff}
 .page-hero .kicker{color:var(--yellow)!important}
 .header .brand{width:190px;height:82px;border-radius:0;background-color:transparent;background-image:url("assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg");background-size:contain;box-shadow:none}
@@ -83,7 +83,7 @@ footer .brand{flex:0 0 72px;background-color:#fff}
   .header nav{display:none}
   .header>.button{min-width:124px;font-size:13px}
   .menu-toggle{display:inline-flex;align-items:center}
-  .header.is-menu-open nav{display:flex;position:absolute;left:0;right:0;top:100%;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:4px;background:#273a7d;border-bottom:1px solid rgba(255,255,255,.2);box-shadow:0 15px 30px rgba(5,44,91,.2);font-size:15px}
+  .header.is-menu-open nav{display:flex;position:absolute;left:0;right:0;top:100%;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:4px;background:#253372;border-bottom:1px solid rgba(255,255,255,.2);box-shadow:0 15px 30px rgba(5,44,91,.2);font-size:15px}
   .header.is-menu-open nav>a,.header.is-menu-open nav details{padding:8px 0;margin-left:0}
   .header.is-menu-open nav>a[href*="contact/"]{margin-top:7px}
   .header.is-menu-open nav details>summary{justify-content:space-between;padding-left:14px;padding-right:14px}
