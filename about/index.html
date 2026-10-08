@@ -11,9 +11,7 @@
 .about-intro{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:36px;align-items:start;margin-bottom:84px}
 .about-gallery{display:grid;grid-template-columns:.72fr 1.28fr;gap:14px}
 .about-gallery .image-frame:first-child{grid-column:1/-1}
-.about-gallery .campus-photo{grid-column:1/-1;aspect-ratio:3.38 / 1;padding:7px}
 .about-gallery .lab-photo{grid-column:1/-1;height:500px;aspect-ratio:auto;padding:7px}
-.about-gallery .campus-photo img{object-position:center}
 .about-gallery .lab-photo img{object-position:center 34%}
 .image-frame{position:relative;aspect-ratio:4 / 3;background:var(--pale);border:1px solid var(--line);padding:10px;overflow:hidden}
 .image-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% center}
@@ -52,7 +50,7 @@ nav{display:flex;align-items:center;gap:18px}
 .more-menu .more-links{position:absolute;right:0;top:28px;z-index:10;display:grid;min-width:185px;padding:8px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 25px rgba(6,60,125,.14)}
 .more-menu .more-links a{padding:9px 10px;white-space:nowrap;color:var(--navy)}
 @media(max-width:900px){.about-intro,.text-layout{grid-template-columns:1fr}.element-grid{grid-template-columns:1fr}.text-nav{position:static}.text-section{grid-template-columns:1fr}.text-block.wide{grid-column:auto}.notes{grid-template-columns:1fr}.about{width:min(100% - 36px,700px)}nav{gap:9px}.header nav>a:nth-child(n+4){display:none}}
-@media(max-width:600px){.intro-copy{padding:30px 25px}.section-heading h2{font-size:34px}.image-frame{min-height:300px}.image-frame img{min-height:278px}.about-gallery{grid-template-columns:1fr}.about-gallery .campus-photo,.about-gallery .lab-photo{grid-column:1;min-height:0}.about-gallery .campus-photo{height:auto}.about-gallery .lab-photo{height:460px}.about-gallery .campus-photo img,.about-gallery .lab-photo img{min-height:0}}
+@media(max-width:600px){.intro-copy{padding:30px 25px}.section-heading h2{font-size:34px}.image-frame{min-height:300px}.image-frame img{min-height:278px}.about-gallery{grid-template-columns:1fr}.about-gallery .lab-photo{grid-column:1;min-height:0;height:460px}.about-gallery .lab-photo img{min-height:0}}
 </style>
 </head>
 <body>
@@ -71,8 +69,8 @@ nav{display:flex;align-items:center;gap:18px}
       <div class="about-gallery"><figure class="image-frame">
         <img src="../assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" data-figma-image="assets/8c51ca_0c34e87d40b34bcd9e8ae8438cf48419~mv2.png" alt="Dr. Edward Neuwelt presenting biomedical imaging research">
         <figcaption class="caption">Dr. Edward Neuwelt presenting biomedical imaging research.</figcaption>
-      </figure><figure class="image-frame campus-photo"><img src="../assets/ohsu-campus-panorama.png" alt="OHSU Marquam Hill campus overlooking Portland"></figure><figure class="image-frame lab-photo"><img src="../assets/psi-students-in-lab.png" alt="PSI students wearing laboratory coats and protective equipment"></figure></div>
-      <div class="intro-copy"><p class="kicker">Our Story</p><h2>The Partnership for Scientific Inquiry (PSI), founded in 1999, is a cornerstone outreach initiative of OHSU.</h2><p>PSI introduces high school sophomores and juniors to real-world biomedical research, encouraging hands-on laboratory experience and mentoring by leading scientists. After the retirement of Drs. Edward Neuwelt, James Rosenbaum, and Richard Rosenbaum, Drs. Muldoon and Barajas stepped in to carry forward the PSI High School science program, maintaining its excellence, expanding its reach, and guiding it into its next chapter.</p></div>
+      </figure><figure class="image-frame lab-photo"><img src="../assets/psi-students-in-lab.png" alt="PSI students wearing laboratory coats and protective equipment"></figure></div>
+      <div class="intro-copy"><p class="kicker">Our Story</p><h2>The Partnership for Scientific Inquiry (PSI), founded in 1999, is a cornerstone outreach initiative of OHSU.</h2><p>PSI introduces high school sophomores, juniors, and seniors to real-world biomedical research, encouraging hands-on laboratory experience and mentoring by leading scientists. After the retirement of Drs. Edward Neuwelt, James Rosenbaum, and Richard Rosenbaum, Drs. Muldoon and Barajas stepped in to carry forward the PSI High School science program, maintaining its excellence, expanding its reach, and guiding it into its next chapter.</p></div>
     </div>
     <section aria-labelledby="elements"><div class="section-heading"><h2 id="elements">Elements of the Program</h2></div><div class="element-grid">
       <article class="element-card"><h3>Cost</h3><p>PSI is offered at no cost to students and all program activities are the result of dedicated volunteer efforts. If you are interested in helping with the program, please email us!</p></article>
