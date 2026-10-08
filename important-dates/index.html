@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     .dates-page{width:min(1160px,calc(100% - 64px));margin:0 auto;padding:74px 0 116px}
-    .dates-intro{display:grid;grid-template-columns:1.08fr .92fr;gap:0;align-items:stretch;background:#f1f5f9;border:1px solid #d5e0ea;box-shadow:0 18px 42px rgba(8,55,103,.08)}
+    .dates-intro{background:#f1f5f9;border:1px solid #d5e0ea;box-shadow:0 18px 42px rgba(8,55,103,.08)}
     .dates-intro-copy{padding:54px 52px 50px}
     .dates-intro-copy h1{margin:0;color:#084fa8;font-size:54px;line-height:1;letter-spacing:-.065em}
     .dates-intro-copy .rule{width:74px;height:5px;margin:25px 0 0;background:#ffd426}
-    .source-photo{display:block;width:100%;height:100%;min-height:335px;object-fit:cover;object-position:center;background:#dce5ee}
     .dates-timeline{position:relative;margin-top:76px;padding-left:37px}
     .dates-timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:12px;width:2px;background:#c2d0df}
     .date-item{position:relative;display:grid;grid-template-columns:292px 1fr;gap:36px;padding:0 0 34px;margin:0 0 34px;border-bottom:1px solid #d5e0ea}
@@ -35,7 +34,7 @@
     .dates-page .more-links{position:absolute;z-index:5;right:0;top:34px;display:grid;min-width:180px;padding:10px;background:#fff;border:1px solid #cddce8;box-shadow:0 12px 28px rgba(8,55,103,.14)}
     .dates-page .more-links a{padding:9px 10px;color:#084fa8;text-decoration:none;font-size:14px;font-weight:750;white-space:nowrap}
     .dates-page .more-links a:hover{background:#edf5fb}
-    @media(max-width:900px){.dates-intro{grid-template-columns:1fr}.source-photo{min-height:260px}.date-item{grid-template-columns:220px 1fr;gap:24px}}
+    @media(max-width:900px){.date-item{grid-template-columns:220px 1fr;gap:24px}}
     @media(max-width:720px){.dates-page{width:min(100% - 40px,1160px);padding:56px 0 80px}.dates-intro-copy{padding:38px 28px}.dates-intro-copy h1{font-size:42px}.dates-timeline{margin-top:55px;padding-left:27px}.dates-timeline:before{left:7px}.date-item,.date-item:nth-child(even){display:block;padding:0 0 28px;margin-bottom:28px;background:transparent;border:0;border-bottom:1px solid #d5e0ea}.date-item:before,.date-item:nth-child(even):before{left:-27px;top:4px}.date-label{margin-bottom:10px}.date-copy{font-size:18px}.date-copy .note{font-size:15px}}
   </style>
 </head>
@@ -53,7 +52,6 @@
     <section class="dates-page">
       <section class="dates-intro">
         <div class="dates-intro-copy"><h1>Important Dates</h1><div class="rule" aria-hidden="true"></div></div>
-        <img class="source-photo" src="../assets/11062b_b8f54a47fba14e8d82bb5a334f95b0bc~mv2.jpg" alt="Scientist conducting laboratory research with a microscope and glassware">
       </section>
       <section class="dates-timeline">
         <article class="date-item"><div class="date-label">September 18th, 2026</div><div class="date-copy"><p>Application forms open</p></div></article>
