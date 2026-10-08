@@ -12,7 +12,7 @@ img{display:block;max-width:100%}.hero>img{object-position:center center}.page-h
 .cards .card-image .mentor-image{object-position:center 31%;transform:none}
 .cards .card-image .summer-image{object-position:68% center;transform:scale(1.16)}
 .cards .card-image .conference-image{object-position:center 48%;transform:scale(1.1)}
-.story>img.story-logo{object-fit:contain;background:#273a7d;padding:14px}
+.story>img.story-logo{height:auto;aspect-ratio:2150/1453;object-fit:cover;background:transparent;padding:0}
 .course-experience{padding:100px 0 108px;background:var(--pale)}
 .course-heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:92px;align-items:end;margin-bottom:38px}
 .course-heading h2{margin:10px 0 0;color:var(--blue);font-size:clamp(36px,4.3vw,56px);line-height:1.03;letter-spacing:-.05em}
