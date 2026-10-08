@@ -43,7 +43,7 @@
   header.querySelectorAll('nav details').forEach((menu) => {
     if (!menu.classList.contains('more-menu') && !menu.classList.contains('more-nav')) menu.classList.add('more-menu');
   });
-  document.querySelectorAll('nav a[href*="visitor-analytics"],nav a[href*="alumni-achievements"]').forEach((link) => link.remove());
+  document.querySelectorAll('nav a[href*="visitor-analytics"],nav a[href*="alumni-achievements"],a[href*="media/"]').forEach((link) => link.remove());
   document.querySelectorAll('.cards article:nth-child(3) a[href="previous-lectures/"]').forEach((link) => {
     link.href = 'awards/';
   });
