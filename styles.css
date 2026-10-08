@@ -9,7 +9,7 @@ img{display:block;max-width:100%}.hero>img{object-position:center center}.page-h
 .cards .conference-image{object-position:center 46%}
 .cards .card-image{width:calc(100% + 56px);height:220px;overflow:hidden;margin:0 -28px 24px;background:var(--pale)}
 .cards .card-image img{width:100%;height:100%;margin:0;object-fit:cover}
-.cards .card-image .mentor-image{object-position:center 43%;transform:scale(1.06)}
+.cards .card-image .mentor-image{object-position:center 31%;transform:none}
 .cards .card-image .summer-image{object-position:68% center;transform:scale(1.16)}
 .cards .card-image .conference-image{object-position:center 48%;transform:scale(1.1)}
 .story>img.story-logo{object-fit:contain;background:#273a7d;padding:14px}
@@ -94,6 +94,7 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 @media(min-width:901px){
   .hero{overflow:hidden}
   .hero>img{object-position:68% center;transform:translateY(-24px) scale(1.1);transform-origin:center center}
+  .hero>img.hero-main-image{object-position:center center;transform:none}
 }
 
 /* Contact page refinement */
