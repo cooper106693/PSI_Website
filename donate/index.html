@@ -36,6 +36,9 @@ body{background:#fff;color:var(--donate-ink)}
 .section-block{padding:74px 0 0}
 .section-block h2{margin:0 0 18px;color:var(--donate-blue);font-size:clamp(30px,3.5vw,45px);line-height:1.05;letter-spacing:-.055em}
 .section-block>p{max-width:840px;margin:0 0 22px;font-size:18px}
+.gift-intro{max-width:none!important}
+.student-impact{margin:34px 0 0;padding:34px 40px;border-radius:16px;background:var(--donate-yellow);color:var(--donate-navy);font-size:clamp(24px,4vw,44px);font-weight:900;line-height:1.05;text-align:center;letter-spacing:-.035em}
+.student-impact strong{font-size:1.35em}
 .support-grid,.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .support-card,.impact-card{padding:25px 25px 27px;border:1px solid var(--donate-line);border-radius:14px;background:#fff;box-shadow:0 12px 30px rgba(21,48,71,.05)}
 .support-card{border-top:5px solid var(--donate-blue);min-height:150px}
@@ -60,6 +63,7 @@ body{background:#fff;color:var(--donate-ink)}
 .donate-footer a:hover{color:var(--donate-yellow)}
 .donate-footer .footer-links{display:flex;gap:18px;align-items:start;flex-wrap:wrap;font-size:14px;font-weight:700}
 @media(max-width:980px){.header nav{gap:12px}.header .button{display:none}.more-panel{right:-12px}.donate-lead,.give-block{grid-template-columns:1fr}.give-block .photo-frame{display:none}}
+@media(min-width:900px){.gift-intro{white-space:nowrap}}
 @media(max-width:760px){.header{padding-left:20px;padding-right:20px}.header nav{display:none}.header .brand span{display:none}.donate-main{width:min(100% - 40px,1150px);padding-top:38px}.donate-lead-copy{padding:36px 30px}.support-grid,.impact-grid{grid-template-columns:1fr}.donate-hero{padding:70px 0}.donate-footer{flex-direction:column;align-items:flex-start}.more-panel{grid-template-columns:1fr;min-width:220px}}
 </style>
 </head>
@@ -102,7 +106,8 @@ body{background:#fff;color:var(--donate-ink)}
     </div>
     <section class="section-block">
       <h2>Why Donate?</h2>
-      <p>The Partnership for Scientific Inquiry (PSI) is offered at no cost to students thanks to the generosity of donors and volunteers. Each year, PSI connects talented high school students with scientists and clinicians for a 16-week research course and optional summer internships.</p>
+      <p>PSI is offered at no cost to students thanks to the generosity of donors and volunteers. Each year, the program connects talented high school students with scientists and clinicians for a 16-week research course and optional summer internships.</p>
+      <div class="student-impact"><strong>100%</strong> goes to PSI students.</div>
       <p>Your support helps us:</p>
       <div class="support-grid">
         <article class="support-card"><p>Offer scholarships for students with financial need to be able to provide lab experiences and research mentorship to students from all backgrounds</p></article>
@@ -117,7 +122,7 @@ body{background:#fff;color:var(--donate-ink)}
         <article class="impact-card"><p>Many alumni go on to STEM majors, medical school, PhDs, and beyond</p></article>
         <article class="impact-card"><p>Donations keep the program free and accessible for all participants</p></article>
       </div>
-      <p style="margin-top:28px">Every dollar directly supports student learning and research experiences. Here’s what your gift can provide:</p>
+      <p class="gift-intro" style="margin-top:28px">Every dollar directly supports student learning and research experiences. Here’s what your gift can provide:</p>
       <div class="gift-table-wrap"><table class="gift-table"><thead><tr><th>Example</th><th>Donation Estimate (US$)</th><th>Impact</th></tr></thead><tbody><tr><td>Scholarships for Summer Internships (15–50 students)</td><td>$2,000–$4,000 per student<br>($30K–$200K/year)</td><td>Enables participation for students with financial need</td></tr><tr><td>In-Person Poster Conference &amp; Student Symposium</td><td>$6,000–$12,000</td><td>Venue, printing, awards, food/refreshments</td></tr><tr><td>Laptops for Accessibility</td><td>$1,000–$20,000</td><td>Technology for students with limited access</td></tr><tr><td>Website &amp; Educational Tools</td><td>$500 annually</td><td>Keeps the program running online</td></tr><tr><td>Webcam &amp; Headphones for Virtual Class</td><td>$20–$30 per student</td><td>Ensures participation in didactic courses</td></tr><tr><td>Printed Materials &amp; Outreach</td><td>$500–$2,000</td><td>Flyers, posters, student booklets</td></tr></tbody></table></div>
     </section>
     <section class="give-block">

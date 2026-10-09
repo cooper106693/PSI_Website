@@ -9,9 +9,9 @@
     .leadership{width:min(1180px,calc(100% - 64px));margin:0 auto;padding:80px 0 110px}
     .section-label{margin:0 0 22px;color:#084fa8;font-size:14px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
     .director-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-    .director{display:grid;grid-template-columns:42% 58%;overflow:hidden;background:#edf5fb;border:1px solid #cddce8;box-shadow:0 16px 42px rgba(5,44,91,.08)}
+    .director{display:grid;grid-template-rows:auto 1fr;overflow:hidden;background:#edf5fb;border:1px solid #cddce8;box-shadow:0 16px 42px rgba(5,44,91,.08)}
     .director:nth-child(2){background:#edf5fb;color:#153047;border-color:#cddce8}
-    .director img{width:100%;height:100%;min-height:500px;object-fit:cover;object-position:center top}
+    .director img{width:100%;height:360px;min-height:0;object-fit:cover;object-position:center 22%}
     .director-copy{display:flex;flex-direction:column;padding:36px 30px 34px}
     .director h2,.people-card h3{margin:0;color:#084fa8;font-size:34px;line-height:1;letter-spacing:-.045em}
     .director:nth-child(2) h2{color:#084fa8}
@@ -41,7 +41,7 @@
     .history h2{margin:0 0 24px;color:#ffd426;font-size:43px;letter-spacing:-.05em;line-height:1}
     .history p{max-width:930px;margin:0 0 18px;font-size:17px;line-height:1.65}
     .history p:last-child{margin-bottom:0}
-    @media(max-width:1050px){.director{grid-template-columns:1fr}.director img{height:420px;min-height:0}.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:1050px){.director img{height:360px}.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:760px){.leadership{width:min(100% - 40px,1180px);padding:58px 0 76px}.director-grid,.team-grid,.support-grid{grid-template-columns:1fr}.director img{height:auto;aspect-ratio:1 / 1.05}.director-copy{padding:28px 24px}.team-section{margin-top:62px}.team-heading h2{font-size:36px}.history{margin-top:62px;padding:38px 28px}.history h2{font-size:37px}}
   </style>
 </head>
@@ -54,12 +54,12 @@
     <a class="button yellow" href="../donate/">Donate to PSI</a>
   </header>
   <main>
-    <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Meet the PSI Leadership:</h1></div></section>
+    <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Meet the Leadership</h1></div></section>
     <section class="leadership">
       <p class="section-label">Program Directors</p>
       <div class="director-grid">
         <article class="director"><img src="../assets/8c51ca_6910b4919f684a828984b31fca8cab2e~mv2.jpeg" alt="Sam King"><div class="director-copy"><h2>Sam King</h2><p class="role">Program Co-Director</p><p>Sam King (he/him) is a 3rd-year MD/PhD student in the OHSU School of Medicine. His research applies computational methods to reproductive biology and the genetic causes of male infertility at the Oregon National Primate Research Center (ONPRC).Sam has mentoring and teaching experience as a lab mentor at Purdue University, a Supplemental Instruction Leader for anatomy and physiology, and a tutor in science and math. He is passionate about encouraging students to explore careers in science and medicine, aiming to make these fields more accessible.</p><a class="linkedin-link" href="https://www.linkedin.com/in/sam-king-2585771b9/" target="_blank" rel="noopener noreferrer" aria-label="Sam King on LinkedIn">LinkedIn profile</a></div></article>
-        <article class="director"><img src="../assets/8c51ca_d6f5c57946594dd3a0e973fb8fe66a56~mv2.jpg" alt="Sofia Vignolo"><div class="director-copy"><h2>Sofia Vignolo</h2><p class="role">Program Co-Director</p><p>Sofia Vignolo (she/her) is a 6th-year MD/PhD student in the OHSU Biomedical Engineering Graduate Program. Her research focus is on bone regeneration with a clinical application in reconstructive surgery. She has experience in teaching under the Science Made Sensible program at the University of Miami as well as involvement in tutoring and mentorship throughout her career development. She aims to take an active role in inspiring the future generation of researchers to advance their scientific curiosity.</p><a class="linkedin-link" href="https://www.linkedin.com/in/sofiamvignolo/" target="_blank" rel="noopener noreferrer" aria-label="Sofia Vignolo on LinkedIn">LinkedIn profile</a></div></article>
+        <article class="director"><img src="../assets/8c51ca_d6f5c57946594dd3a0e973fb8fe66a56~mv2.jpg" alt="Sofia Vignolo"><div class="director-copy"><h2>Sofia Vignolo</h2><p class="role">Program Co-Director</p><p>Sofia Vignolo (she/her) is a 7th-year MD/PhD student in the OHSU Biomedical Engineering Graduate Program. Her research focus is on bone regeneration with a clinical application in reconstructive surgery. She has experience in teaching under the Science Made Sensible program at the University of Miami as well as involvement in tutoring and mentorship throughout her career development. She aims to take an active role in inspiring the future generation of researchers to advance their scientific curiosity.</p><a class="linkedin-link" href="https://www.linkedin.com/in/sofiamvignolo/" target="_blank" rel="noopener noreferrer" aria-label="Sofia Vignolo on LinkedIn">LinkedIn profile</a></div></article>
       </div>
       <section class="team-section">
         <div class="team-heading"><h2>Teaching Assistants</h2></div>

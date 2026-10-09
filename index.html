@@ -29,6 +29,11 @@
     .phase h3{font-size:25px;line-height:1.1;margin:0 0 7px;color:#fff}
     .phase-time{margin:0 0 22px;font-size:17px;color:#fff}
     .phase ul{list-style:none;padding:0;margin:0 0 24px;color:#d5e8f2;line-height:1.5;min-height:108px}
+    .phase .project-options{display:grid;gap:5px;width:min(100%,270px);margin:10px auto 0;padding:8px;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(255,255,255,.025);color:#d5e8f2;line-height:1.35}
+    .project-options span{display:block;padding:7px 8px;border-radius:7px;background:rgba(255,255,255,.045)}
+    .project-options strong{display:block;color:#fff;font-size:14px}
+    .project-options small{display:block;margin-top:3px;color:#c7dce8;font-size:12px;line-height:1.4}
+    .project-options b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#b9d0dd;font-weight:700}
     .phase-outcome{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.18);font-weight:800;font-size:14px}
     .journey-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
     .journey-cta .button:first-child{background:var(--yellow);color:var(--navy-deep)}
@@ -52,8 +57,20 @@
     .final-cta{background:var(--yellow);padding:72px 0}
     .final-cta .content{display:flex;align-items:center;justify-content:space-between;gap:36px}
     .final-cta h2{font-size:clamp(34px,4vw,50px);line-height:1.05;letter-spacing:-.04em;margin:0;color:var(--navy-deep)}
+    .final-cta .button{text-align:center;white-space:nowrap}
+    .cards .card-image{height:auto;aspect-ratio:2354 / 1047}
+    .cards .card-image .conference-image{object-fit:cover!important;object-position:center!important;transform:none;background:#edf5fb}
+    .cards .card-image .mentor-image{object-position:center 29%}
+    .cards .card-image .summer-image{object-position:center;transform:none}
+    .green-band{padding-bottom:42px}
+    .sponsor-band{padding-top:42px}
+    .sponsor-copy{grid-template-columns:1fr;gap:30px}
+    .sponsor-lists{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .sponsor-lists h3{color:#ffd426;margin:0 0 12px;font-size:20px}
+    .sponsor-lists ul{margin:0;padding-left:20px;line-height:1.55}
     @media(max-width:900px){.draft-hero{grid-template-columns:1fr}.draft-hero-copy{padding:68px 30px}.draft-hero-media{min-height:420px}.experience-layout,.mission-grid{grid-template-columns:1fr;gap:28px}.timeline-panel{padding:42px 26px}.timeline-steps{grid-template-columns:1fr;gap:42px}.timeline-steps:before{left:51px;right:auto;top:55px;bottom:55px;width:8px;height:auto;background:linear-gradient(180deg,var(--mint),var(--gold),var(--coral))}.phase{display:grid;grid-template-columns:102px 1fr;text-align:left;column-gap:24px;align-items:start}.phase-icon{grid-row:1/6;width:94px;height:94px;margin:0;box-shadow:0 0 0 8px var(--navy-deep)}.phase h3,.phase-time,.phase ul,.phase-outcome{grid-column:2}.phase ul{min-height:0}.phase-outcome{justify-self:start}.student-photo,.student-photo img{height:520px;min-height:520px}.final-cta .content{align-items:flex-start;flex-direction:column}}
-    @media(max-width:560px){.draft-hero-media{min-height:340px}.journey,.experience,.mission{padding:72px 0}.timeline-panel{border-radius:22px;padding:36px 20px}.phase{grid-template-columns:74px 1fr;column-gap:18px}.phase-icon{width:68px;height:68px;font-size:11px}.timeline-steps:before{left:30px}.phase h3{font-size:21px}.student-photo,.student-photo img{height:450px;min-height:450px}.final-cta{padding:55px 0}}
+    @media(max-width:700px){.sponsor-lists{grid-template-columns:1fr}.green-band{padding-bottom:28px}.sponsor-band{padding-top:28px}}
+    @media(max-width:560px){.draft-hero-media{min-height:340px}.journey,.experience,.mission{padding:72px 0}.timeline-panel{border-radius:22px;padding:36px 20px}.phase{grid-template-columns:74px 1fr;column-gap:18px}.phase-icon{width:68px;height:68px;font-size:11px}.timeline-steps:before{left:30px}.phase h3{font-size:21px}.student-photo,.student-photo img{height:450px;min-height:450px}.final-cta{padding:55px 0}.final-cta .button{white-space:normal;width:100%}}
   </style>
 </head>
 <body class="timeline-draft">
@@ -63,13 +80,15 @@
 
   <section class="content split"><div><p class="kicker blue">Program Overview</p><h2>About the PSI Course</h2></div><div><p>Our program accepts Sophomore, Junior, and Senior high school students who are interested in pursuing careers in medicine or biomedical research through a 16-week course from January to May. Students are introduced to the scientific process and gain access to research scientists from OHSU and other Portland research institutes.</p><p>The semester-long program typically ends with a summer internship opportunity to work alongside a research mentor, requiring students to be at least 16 years old.</p><p>We meet for two hours on Wednesdays (January-May) for a lecture series and to learn about ongoing research projects conducted by scientists at Oregon Health &amp; Science University (OHSU).</p></div></section>
 
+  <section class="content split story"><img class="story-logo" src="assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg" alt="Partnership for Scientific Inquiry logo"><div><p class="kicker blue">Our Story</p><h2>Our mission is to open doors to biomedical research for students in Oregon and the Portland metro community who might not have had the chance otherwise, particularly those without built-in advantages.</h2><p>This includes having parents without graduate-level education and those from low socioeconomic status. Our goal is to create a level playing field where talent, curiosity, and dedication are the primary criteria for success, thus inspiring future leaders in science from different backgrounds.</p><p>We are committed to providing equitable access and opportunities in the world of biomedical research, ensuring that every aspiring student, regardless of their background, can participate and excel in this transformative experience.</p><a class="button blue-button" href="testimonials/">Testimonials</a></div></section>
+
   <section class="journey" id="program-journey">
     <div class="content">
-      <div class="journey-head"><h2>Program Overview</h2></div>
+      <div class="journey-head"><h2>Program Timeline</h2></div>
       <div class="timeline-panel">
         <div class="timeline-steps">
-          <article class="phase"><div class="phase-icon">CLASSES</div><h3>Academic Term</h3><p class="phase-time">January – May</p><ul><li>Weekly classes</li><li>Weekly mentorship meetings</li><li>Research fundamentals</li><li>Scientific methodology</li></ul><div class="phase-outcome">3 Major Assignments</div></article>
-          <article class="phase"><div class="phase-icon">RESEARCH</div><h3>Summer Internship</h3><p class="phase-time">June – August</p><ul><li>8-10 week Research Experience</li><li>Faculty mentoring</li><li>Hands-on lab work</li></ul><div class="phase-outcome">Research Project</div></article>
+          <article class="phase"><div class="phase-icon">CLASSES</div><h3>Academic Term</h3><p class="phase-time">January – May</p><ul><li>Weekly classes</li><li>Weekly mentorship meetings</li><li>DNA Day Essay</li><li>Journal Club Presentation</li><li>Research Proposal</li></ul><div class="phase-outcome">3 Major Assignments</div></article>
+          <article class="phase"><div class="phase-icon">RESEARCH</div><h3>Summer Internship</h3><p class="phase-time">June – August</p><ul><li class="project-options"><span><strong>Hands-on lab work</strong><small>8-10 week research experience<br>Faculty mentoring</small></span><b>or</b><span>Literature review<br>Independent data analysis project</span></li></ul><div class="phase-outcome">Research Project</div></article>
           <article class="phase"><div class="phase-icon">PRESENT</div><h3>PSI Conference</h3><p class="phase-time">August</p><ul><li>Poster presentations</li><li>Research showcase</li><li>Program conclusion</li></ul><div class="phase-outcome">Final Presentation</div></article>
         </div>
         <div class="journey-cta"><a class="button" href="important-dates/">View Important Dates</a></div>
@@ -77,22 +96,9 @@
     </div>
   </section>
 
-  <section class="green-band"><div class="content"><p class="kicker">Elements of the Program</p><div class="cards"><article><div class="card-image"><img class="mentor-image" src="assets/mentor-autumn-schnathorst.jpeg" alt="PSI student Autumn Schnathorst with her mentor at a poster presentation"></div><h3>Didactic Mentors</h3><p>All PSI students are matched one-on-one with a mentor in the OHSU School of Medicine to guide them through the 16-week didactic course.</p><a href="about/">About the PSI Program</a></article><article><div class="card-image"><img class="summer-image" src="assets/8c51ca_e12936298d0d42bba3d9cb0ba8fda319~mv2.png" alt="Student conducting summer research"></div><h3>Summer Internship</h3><p>Students may elect to join a scientific laboratory or perform clinical research over the summer.</p><a href="important-dates/">Important Dates</a></article><article><div class="card-image"><img class="conference-image" src="assets/8c51ca_7bb2a221c1ff40a1aea00238dcd94cdd~mv2.jpeg" alt="PSI students and mentors at the poster conference"></div><h3>PSI Poster Conference</h3><p>As of 2023, we host a poster symposium at the end of the summer internship series to showcase the students' research and allow them to practice their presentation skills.</p><a href="awards/">View Conference Awards</a></article></div></div></section>
+  <section class="green-band"><div class="content"><p class="kicker">Elements of the Program</p><div class="cards"><article><div class="card-image"><img class="mentor-image" src="assets/mentor-autumn-schnathorst.jpeg" alt="PSI student Autumn Schnathorst with her mentor at a poster presentation"></div><h3>Didactic Mentors</h3><p>All students are matched one-on-one with a mentor to guide them through the 16-week didactic course. Mentors come from varied training backgrounds and may be graduate students, medical students, laboratory technicians, postdoctoral researchers, or other members of the OHSU research community.</p><a href="about/">About the Program</a></article><article><div class="card-image"><img class="summer-image" src="assets/8c51ca_e12936298d0d42bba3d9cb0ba8fda319~mv2.png" alt="Student conducting summer research"></div><h3>Summer Internship</h3><p>Students may elect to join a scientific laboratory or perform clinical research over the summer. Students who do not participate in an internship will do a literature review or independent data analysis project.</p><a href="important-dates/">Important Dates</a></article><article><div class="card-image"><img class="conference-image" src="assets/8c51ca_7bb2a221c1ff40a1aea00238dcd94cdd~mv2.jpeg" alt="PSI students and mentors at the poster conference"></div><h3>Poster Conference</h3><p>As of 2023, we host a poster symposium at the end of the summer internship series to showcase the students' research and allow them to practice their presentation skills.</p><a href="awards/">View Conference Awards</a></article></div></div></section>
 
-  <section class="experience">
-    <div class="content experience-layout">
-      <figure class="student-photo"><img src="assets/psi-students-in-lab.png" alt="PSI students wearing laboratory coats and protective equipment"></figure>
-      <div class="experience-copy"><p class="kicker blue">The Student Experience</p><h2>Learning science by doing science</h2><div class="benefit-list">
-        <div class="benefit"><div class="benefit-number">01</div><div><h3>Mentorship &amp; Scientific Communication</h3><p>Each student will be mentored by a training researcher. Each student gains firsthand knowledge of research methods, and, with their mentor's help, will present a published research article in a journal club format and develop their own research proposal.</p></div></div>
-        <div class="benefit"><div class="benefit-number">02</div><div><h3>Commitment &amp; Summer Research</h3><p>The program requires regular attendance and significant time commitment outside of class for course assignments. Students may elect to join a scientific laboratory or perform clinical research over the summer. Research faculty and students volunteer their time and resources to mentor PSI students.</p></div></div>
-        <div class="benefit"><div class="benefit-number">03</div><div><h3>Connecting with Local Schools</h3><p>We work closely with local high school officials to reach out to students interested in science and medical research and to arrange for high school credit earned by participating in the class.</p></div></div>
-      </div></div>
-    </div>
-  </section>
-
-  <section class="content split story"><img class="story-logo" src="assets/8c51ca_3cf25c56721d465fbe4b03a7d5243766~mv2.jpg" alt="Partnership for Scientific Inquiry logo"><div><p class="kicker blue">Our Story</p><h2>Our mission is to open doors to biomedical research for students in Oregon and the Portland metro community who might not have had the chance otherwise, particularly those without built-in advantages.</h2><p>This includes having parents without graduate-level education and those from low socioeconomic status. Our goal is to create a level playing field where talent, curiosity, and dedication are the primary criteria for success, thus inspiring future leaders in science from different backgrounds.</p><p>We are committed to providing equitable access and opportunities in the world of biomedical research, ensuring that every aspiring student, regardless of their background, can participate and excel in this transformative experience.</p><a class="button blue-button" href="testimonials/">Testimonials</a></div></section>
-
-  <section class="sponsor-band"><div class="content sponsor-copy"><div><p class="kicker">Community Support</p><h2>We are so grateful to our sponsors!</h2></div><div><p><strong>Past sponsor(s):</strong> Jonathan D + Mark C. Lewis Foundation, the Renaissance Foundation, the OHSU Biomedical Engineering Department, and the Vollum Institute.</p><p>We deeply appreciate their support that helped build and sustain our program.</p></div></div></section>
+  <section class="sponsor-band"><div class="content sponsor-copy"><div><p class="kicker">Community Support</p><h2>We are so grateful to our sponsors!</h2></div><div class="sponsor-lists"><div><h3>This past year, the program was supported by:</h3><ul><li>The OHSU Vollum Institute</li><li>The OHSU Office of Visitors &amp; Volunteers</li><li>The OHSU Biomedical Engineering Department</li><li>PSI alumni</li><li>OHSU Blood Brain Barrier and Neuro-Oncology Program</li><li>Friends and Family of Dr. Edward Neuwelt</li></ul></div><div><h3>We also thank previous supporters:</h3><ul><li>The Stan and Madelle Rosenfeld Family Trust</li><li>The Achievement Rewards for College Scientists (ARCS) Foundation</li><li>Jonathan D + Mark C. Lewis Foundation</li><li>The Renaissance Foundation</li><li>Metropolitan Medical Foundation of Oregon (MMFO)</li><li>A Community Engagement Grant from the Howard Hughes Medical Institute (HHMI) Gilliam Fellowship</li></ul></div></div></div></section>
 
   <section class="final-cta"><div class="content"><h2>Applications for the 2027 program are now open.</h2><a class="button blue-button" href="application/">Start Your Application</a></div></section>
 </main>
