@@ -29,9 +29,9 @@
     .phase h3{font-size:25px;line-height:1.1;margin:0 0 7px;color:#fff}
     .phase-time{margin:0 0 22px;font-size:17px;color:#fff}
     .phase ul{list-style:none;padding:0;margin:0 0 24px;color:#d5e8f2;line-height:1.5;min-height:108px}
-    .phase .project-options{display:grid;gap:5px;width:min(100%,270px);margin:10px auto 0;padding:8px;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(255,255,255,.025);color:#d5e8f2;line-height:1.35}
-    .project-options span{display:block;padding:7px 8px;border-radius:7px;background:rgba(255,255,255,.045)}
-    .project-options strong{display:block;color:#fff;font-size:14px}
+    .phase .project-options{display:grid;gap:5px;width:min(100%,270px);margin:-8px auto 0;padding:8px;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(255,255,255,.025);color:#d5e8f2;line-height:1.35;text-align:center}
+    .project-options span{display:grid;place-content:center;min-height:72px;padding:7px 8px;border-radius:7px;background:rgba(255,255,255,.045);text-align:center}
+    .project-options strong{display:block;color:#fff;font-size:inherit}
     .project-options small{display:block;margin-top:3px;color:#c7dce8;font-size:12px;line-height:1.4}
     .project-options b{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#b9d0dd;font-weight:700}
     .phase-outcome{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 18px;border-radius:999px;background:rgba(255,255,255,.18);font-weight:800;font-size:14px}
@@ -58,10 +58,7 @@
     .final-cta .content{display:flex;align-items:center;justify-content:space-between;gap:36px}
     .final-cta h2{font-size:clamp(34px,4vw,50px);line-height:1.05;letter-spacing:-.04em;margin:0;color:var(--navy-deep)}
     .final-cta .button{text-align:center;white-space:nowrap}
-    .cards .card-image{height:auto;aspect-ratio:2354 / 1047}
     .cards .card-image .conference-image{object-fit:cover!important;object-position:center!important;transform:none;background:#edf5fb}
-    .cards .card-image .mentor-image{object-position:center 29%}
-    .cards .card-image .summer-image{object-position:center;transform:none}
     .green-band{padding-bottom:42px}
     .sponsor-band{padding-top:42px}
     .sponsor-copy{grid-template-columns:1fr;gap:30px}
@@ -84,7 +81,7 @@
 
   <section class="journey" id="program-journey">
     <div class="content">
-      <div class="journey-head"><h2>Program Timeline</h2></div>
+      <div class="journey-head"><h2>Program Overview</h2></div>
       <div class="timeline-panel">
         <div class="timeline-steps">
           <article class="phase"><div class="phase-icon">CLASSES</div><h3>Academic Term</h3><p class="phase-time">January – May</p><ul><li>Weekly classes</li><li>Weekly mentorship meetings</li><li>DNA Day Essay</li><li>Journal Club Presentation</li><li>Research Proposal</li></ul><div class="phase-outcome">3 Major Assignments</div></article>
