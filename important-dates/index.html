@@ -6,36 +6,24 @@
   <title>Important Dates | Partnership for Scientific Inquiry</title>
   <link rel="stylesheet" href="../styles.css">
   <style>
-    .dates-page{width:min(1160px,calc(100% - 64px));margin:0 auto;padding:74px 0 116px}
-    .dates-intro{background:#f1f5f9;border:1px solid #d5e0ea;box-shadow:0 18px 42px rgba(8,55,103,.08)}
-    .dates-intro-copy{padding:54px 52px 50px}
-    .dates-intro-copy h1{margin:0;color:#084fa8;font-size:54px;line-height:1;letter-spacing:-.065em}
-    .dates-intro-copy .rule{width:74px;height:5px;margin:25px 0 0;background:#ffd426}
-    .dates-timeline{position:relative;margin-top:76px;padding-left:37px}
-    .dates-timeline:before{content:"";position:absolute;left:9px;top:10px;bottom:12px;width:2px;background:#c2d0df}
-    .date-item{position:relative;display:grid;grid-template-columns:292px 1fr;gap:36px;padding:0 0 34px;margin:0 0 34px;border-bottom:1px solid #d5e0ea}
-    .date-item:before{content:"";position:absolute;left:-34px;top:8px;width:12px;height:12px;border:4px solid #fff;background:#084fa8;box-shadow:0 0 0 2px #084fa8;border-radius:50%}
-    .date-item:last-child{margin-bottom:0}
-    .date-label{color:#084fa8;font-size:17px;font-weight:850;line-height:1.28}
-    .date-copy{font-size:19px;line-height:1.46}
-    .date-copy p{margin:0 0 12px}
+    main{background:#f7fafc}
+    .dates-page{width:min(900px,calc(100% - 64px));margin:0 auto;padding:58px 0 100px}
+    .phase-heading{margin:48px 0 20px;padding:0 0 16px;color:#063c7d;border-bottom:1px solid #cddce8;font-size:34px;line-height:1.08;letter-spacing:-.045em}
+    .dates-phase:first-of-type .phase-heading{margin-top:0}
+    .tile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .date-item{min-width:0;padding:22px 24px;background:#fff;border:1px solid #d5e0ea}
+    .date-item.wide{grid-column:1/-1}
+    .date-label{color:#084fa8;font-size:18px;font-weight:800;line-height:1.35;margin-bottom:12px}
+    .date-copy{color:#153047;font-size:19px;line-height:1.48}
+    .date-copy p{margin:0 0 10px}
     .date-copy p:last-child{margin-bottom:0}
-    .date-copy .note{font-size:16px;color:#40566c}
-    .session-list{display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none}
-    .session-list li{padding:16px 18px;background:#fff;border:1px solid #d5e0ea;border-left:4px solid #084fa8;border-radius:0 10px 10px 0;font-size:16px}
+    .date-copy .note{color:#40566c;font-size:16px}
+    .session-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin:18px 0 0;padding:0;list-style:none}
+    .session-list li{padding:12px 0;border-bottom:1px solid #d5e0ea;font-size:15px;line-height:1.45}
     .session-list strong{display:block;color:#153047;margin-bottom:3px}
     .session-list a{color:#084fa8;font-weight:750;overflow-wrap:anywhere}
-    .date-item:nth-child(even){padding:24px 26px 34px;background:#f7f9fb;border:1px solid #e1e8ef;border-left:4px solid #ffd426}
-    .date-item:nth-child(even):before{left:-42px;background:#ffd426;box-shadow:0 0 0 2px #ffd426}
-    .dates-page .more-menu{position:relative;display:inline-block;margin-left:7px}
-    .dates-page .more-menu summary{cursor:pointer;list-style:none;color:#084fa8;font-weight:800;padding:7px 0}
-    .dates-page .more-menu summary::-webkit-details-marker{display:none}
-    .dates-page .more-menu summary:after{content:" ▾";font-size:12px}
-    .dates-page .more-links{position:absolute;z-index:5;right:0;top:34px;display:grid;min-width:180px;padding:10px;background:#fff;border:1px solid #cddce8;box-shadow:0 12px 28px rgba(8,55,103,.14)}
-    .dates-page .more-links a{padding:9px 10px;color:#084fa8;text-decoration:none;font-size:14px;font-weight:750;white-space:nowrap}
-    .dates-page .more-links a:hover{background:#edf5fb}
-    @media(max-width:900px){.date-item{grid-template-columns:220px 1fr;gap:24px}}
-    @media(max-width:720px){.dates-page{width:min(100% - 40px,1160px);padding:56px 0 80px}.dates-intro-copy{padding:38px 28px}.dates-intro-copy h1{font-size:42px}.dates-timeline{margin-top:55px;padding-left:27px}.dates-timeline:before{left:7px}.date-item,.date-item:nth-child(even){display:block;padding:0 0 28px;margin-bottom:28px;background:transparent;border:0;border-bottom:1px solid #d5e0ea}.date-item:before,.date-item:nth-child(even):before{left:-27px;top:4px}.date-label{margin-bottom:10px}.date-copy{font-size:18px}.date-copy .note{font-size:15px}}
+    @media(max-width:720px){.dates-page{width:min(100% - 40px,900px);padding:42px 0 72px}.phase-heading{font-size:30px;margin-top:38px}.date-item{padding:19px 20px}.date-copy{font-size:17px}.date-copy .note{font-size:15px}}
+    @media(max-width:560px){.tile-grid,.session-list{grid-template-columns:1fr}.date-item.wide{grid-column:auto}}
   </style>
 </head>
 <body>
@@ -50,19 +38,29 @@
   <main>
     <section class="page-hero"><div class="content"><p class="kicker">Partnership for Scientific Inquiry</p><h1>Important Dates</h1></div></section>
     <section class="dates-page">
-      <section class="dates-intro">
-        <div class="dates-intro-copy"><h1>Important Dates</h1><div class="rule" aria-hidden="true"></div></div>
-      </section>
-      <section class="dates-timeline">
-        <article class="date-item"><div class="date-label">September 18th, 2026</div><div class="date-copy"><p>Application forms open</p></div></article>
-        <article class="date-item"><div class="date-label">2026 Information Sessions</div><div class="date-copy"><p>Demystify the application process! All session times are Pacific Time (PST/PDT).</p><ul class="session-list"><li><strong>Kevin</strong>September 30, 2026 · 6 PM PT<br><a href="https://www.ohsu.webex.com/meet/muellerke" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Kevin E.</strong>October 5, 2026 · 6 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m72b6a4d30095797b34050bed79dd23df" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Jack Henry</strong>Monday, October 19, 2026 · 5–6 PM PT<br><a href="https://ohsu.webex.com/meet/kotnik" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Kate Halverson-Kolkind</strong>Wednesday, October 28, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m4383ee10c194fb46ef86ff3ad0598bf6" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Ashley Anderson</strong>Wednesday, November 4, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m54b850f0d5fc3294584efeec5d7ada3b" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Arthi Inagandla</strong>Monday, November 9, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/meet/inagandl" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Alyssa Granados</strong>Monday, November 23, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/meet/granadoa" target="_blank" rel="noopener">Join the Webex session</a></li></ul></div></article>
+      <section class="dates-phase" aria-labelledby="apply-heading">
+        <h2 class="phase-heading" id="apply-heading">Apply</h2>
+        <div class="tile-grid">
+        <article class="date-item wide"><div class="date-label">September 18th, 2026</div><div class="date-copy"><p>Application forms open</p></div></article>
+        <article class="date-item wide"><div class="date-label">2026 Information Sessions</div><div class="date-copy"><p>Demystify the application process! All session times are Pacific Time (PST/PDT).</p><ul class="session-list"><li><strong>Kevin</strong>September 30, 2026 · 6 PM PT<br><a href="https://www.ohsu.webex.com/meet/muellerke" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Kevin E.</strong>October 5, 2026 · 6 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m72b6a4d30095797b34050bed79dd23df" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Jack Henry</strong>Monday, October 19, 2026 · 5–6 PM PT<br><a href="https://ohsu.webex.com/meet/kotnik" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Kate Halverson-Kolkind</strong>Wednesday, October 28, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m4383ee10c194fb46ef86ff3ad0598bf6" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Ashley Anderson</strong>Wednesday, November 4, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/ohsu/j.php?MTID=m54b850f0d5fc3294584efeec5d7ada3b" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Arthi Inagandla</strong>Monday, November 9, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/meet/inagandl" target="_blank" rel="noopener">Join the Webex session</a></li><li><strong>Alyssa Granados</strong>Monday, November 23, 2026 · 6–7 PM PT<br><a href="https://ohsu.webex.com/meet/granadoa" target="_blank" rel="noopener">Join the Webex session</a></li></ul></div></article>
         <article class="date-item"><div class="date-label">November 23rd, 2026</div><div class="date-copy"><p>Deadline for application AND letter of recommendation</p></div></article>
-        <article class="date-item"><div class="date-label">Mid-December 2026</div><div class="date-copy"><p>Notification of program acceptance</p></div></article>
-        <article class="date-item"><div class="date-label">December 16, 2026</div><div class="date-copy"><p>Onboarding session &amp; PSI overview session (mandatory)</p></div></article>
-        <article class="date-item"><div class="date-label">January 13 - May 26, 2027</div><div class="date-copy"><p>PSI Didactic Course</p><p class="note">We meet Wednesdays 6-8pm virtually (webcam and audio mandatory and availability for us to provide if needed)​</p><p class="note">This year, we may offer some sessions in-person but will provide a virtual option for students who cannot attend for any reason.</p><p class="note">We will not have class during spring break and AP/IB exam weeks</p></div></article>
-        <article class="date-item"><div class="date-label">June-August 2027</div><div class="date-copy"><p>Internship at OHSU</p><p class="note">Minimum of 250 hours expected to be completed</p><p class="note">Limited scholarships available</p><p class="note">Long interruptions (summer camps, long vacations, etc) are not compatible with participation in the internship</p><p class="note">Not guaranteed</p></div></article>
+        <article class="date-item"><div class="date-label">December 14th, 2026</div><div class="date-copy"><p>Notification of program acceptance</p></div></article>
+        <article class="date-item wide"><div class="date-label">December 16, 2026</div><div class="date-copy"><p>Onboarding session &amp; PSI overview session (mandatory)</p></div></article>
+        </div>
+      </section>
+      <section class="dates-phase" aria-labelledby="course-heading">
+        <h2 class="phase-heading" id="course-heading">PSI Course begins</h2>
+        <div class="tile-grid">
+        <article class="date-item wide"><div class="date-label">January 13 - May 26, 2027</div><div class="date-copy"><p>PSI Didactic Course</p><p class="note">We meet Wednesdays 6-8pm virtually (webcam and audio mandatory and availability for us to provide if needed)​</p><p class="note">This year, we may offer some sessions in-person but will provide a virtual option for students who cannot attend for any reason.</p><p class="note">We will not have class during spring break and AP/IB exam weeks</p></div></article>
+        </div>
+      </section>
+      <section class="dates-phase" aria-labelledby="internship-heading">
+        <h2 class="phase-heading" id="internship-heading">Summer Internship begins</h2>
+        <div class="tile-grid">
+        <article class="date-item wide"><div class="date-label">June-August 2027</div><div class="date-copy"><p>Internship at OHSU</p><p class="note">Minimum of 250 hours expected to be completed</p><p class="note">Limited scholarships available</p><p class="note">Long interruptions (summer camps, long vacations, etc) are not compatible with participation in the internship</p><p class="note">Not guaranteed</p></div></article>
         <article class="date-item"><div class="date-label">Early-August 2027</div><div class="date-copy"><p>PSI Conference ​(virtual)</p></div></article>
         <article class="date-item"><div class="date-label">Mid-August 2027</div><div class="date-copy"><p>PSI Conference (in-person)</p><p class="note">Lightning Talks</p><p class="note">Poster Presentations</p><p class="note">Award Ceremony</p></div></article>
+        </div>
       </section>
     </section>
   </main>
