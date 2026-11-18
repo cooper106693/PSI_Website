@@ -78,9 +78,30 @@
     heading.replaceWith(replacement);
   });
 
-  if (!document.querySelector('footer')) {
-    const footer = document.createElement('footer');
-    footer.innerHTML = '<div><a class="brand" href="../"><strong>PSI</strong><span>Partnership for Scientific Inquiry</span></a><p>Questions? <a href="mailto:psiprogram@ohsu.edu">psiprogram@ohsu.edu</a></p></div><div class="footer-links"><a href="../about/">About</a><a href="../awards/">Awards</a><a href="../contact/">Contact</a><a href="../donate/">Donate</a></div>';
-    document.body.append(footer);
-  }
+  // One footer for every page; links resolve from the site's home URL.
+  const siteHome = new URL(header.querySelector('.brand').getAttribute('href'), document.baseURI);
+  const footer = document.querySelector('body > footer') || document.createElement('footer');
+  footer.className = 'site-footer';
+  const inner = document.createElement('div');
+  inner.className = 'site-footer-inner';
+  const links = document.createElement('nav');
+  links.className = 'site-footer-links';
+  links.setAttribute('aria-label', 'Footer navigation');
+  [
+    ['Home', ''],
+    ['About', 'about/'],
+    ['FAQ', 'faq/'],
+    ['Important Dates', 'important-dates/'],
+    ['Contact Us', 'contact/'],
+    ['Donate to PSI', 'donate/']
+  ].forEach(([label, path]) => {
+    const link = document.createElement('a');
+    link.href = new URL(path, siteHome).href;
+    link.textContent = label;
+    links.append(link);
+  });
+  inner.append(links);
+  footer.replaceChildren(inner);
+  if (!footer.isConnected) document.body.append(footer);
+
 })();

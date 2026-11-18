@@ -134,3 +134,11 @@ footer .brand{flex:0 0 72px;background-color:#fff}
 #scholar-alumni .scholar-card{background:#fff}
 #previous-scholars{margin-top:0}
 @media(max-width:700px){#scholar-alumni{padding:48px 20px 28px}}
+
+/* Shared site footer. */
+.site-footer{display:block;padding:0;background:#253372;color:#fff}
+.site-footer-inner{width:min(1240px,calc(100% - 64px));margin:0 auto;padding:30px 0;display:flex;justify-content:center}
+.site-footer-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 26px}
+.site-footer .site-footer-links a{color:#fff;text-decoration:none;font-size:14px;font-weight:700}
+.site-footer .site-footer-links a:hover,.site-footer .site-footer-links a:focus-visible{color:#ffd426;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){.site-footer-inner{width:min(100% - 40px,500px);padding:28px 0}.site-footer-links{gap:11px 20px;text-align:center}}
