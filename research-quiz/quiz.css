@@ -30,6 +30,7 @@
 .research-quiz-page .quiz-preview-close{position:absolute;top:15px;right:17px;border:1px solid #b8ccdc;border-radius:999px;padding:8px 13px;background:#fff;color:#084fa8;font-weight:800}
 .research-quiz-page .quiz-preview-close:hover{background:#edf5fb}
 .research-quiz-page .quiz-question{max-width:830px;margin:0 auto;padding:12px 0 20px}
+.research-quiz-page .quiz-question h2{scroll-margin-top:20px}
 .research-quiz-page .quiz-progress-label{margin:0;color:#084fa8;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .research-quiz-page .quiz-track{height:7px;margin:13px 0 33px;background:#e0e9f1;border-radius:9px;overflow:hidden}
 .research-quiz-page .quiz-track-fill{height:100%;background:#084fa8;transition:width .2s ease}

@@ -155,12 +155,16 @@ function el(tag, className, text) {
   return element;
 }
 
-function resetView() {
-  window.scrollTo(0, 0);
+function resetView(position = 'top') {
   const heading = app.querySelector('h1, h2');
   if (heading) {
     heading.tabIndex = -1;
     heading.focus({ preventScroll: true });
+  }
+  if (position === 'question' && heading) {
+    heading.scrollIntoView({ block: 'start', inline: 'nearest' });
+  } else {
+    window.scrollTo(0, 0);
   }
 }
 
@@ -263,7 +267,7 @@ function showQuestion() {
   navigation.append(back, next);
   section.append(navigation);
   app.append(section);
-  resetView();
+  resetView('question');
 }
 
 function rankedAreas() {
